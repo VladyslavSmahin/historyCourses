@@ -1,0 +1,1036 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h3, h2, h1, h4, button {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+}
+
+a, p {
+  font-family: "JetBrains Mono", sans-serif;
+  font-optical-sizing: auto;
+  line-height: 24px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --myCream: #FFF5CE;
+  --myRed: #921718;
+  --myBlack: #222222;
+  --myWhite: #FFFFFF;
+}
+
+html {
+  .sectionWrapper {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+    @media (min-width: 360px) and (max-width: 1440px) {
+      max-width: calc(320px + (1240 - 320) * ((100vw - 360px) / (1440 - 360)));
+    }
+  }
+
+  body {
+    .section1 {
+      background-image: url("images/texture1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+
+      header {
+        padding-top: 18px;
+        z-index: 1;
+
+        .headerWrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .logo {
+            font-size: 20px;
+            z-index: 1;
+            @media (min-width: 360px) and (max-width: 1440px) {
+              font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+            }
+
+            .logoP1 {
+              color: var(--myCream);
+            }
+
+            .logoP2 {
+              color: var(--myRed);
+            }
+          }
+
+          ul {
+            display: flex;
+            justify-content: space-between;
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              display: none;
+            }
+
+            li {
+              position: relative;
+              padding-left: 4px;
+
+              a {
+                color: var(--myCream);
+                position: relative;
+              }
+
+              a::before {
+                content: "";
+                position: absolute;
+                left: -21px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 30px;
+                height: 1px;
+                background-color: var(--myCream);
+              }
+            }
+
+            li::before {
+              content: '';
+              position: absolute;
+              left: -4px;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 7px;
+              height: 7px;
+              background-color: var(--myRed);
+              border-radius: 50%;
+            }
+
+          }
+
+          ul li:not(:last-child) {
+            margin-right: 48px;
+          }
+
+          .headerBtn {
+            color: var(--myCream);
+            background: none;
+            border: 3px var(--myRed) solid;
+            padding: 12px 20px;
+            font-size: 16px;
+            z-index: 1;
+            @media (min-width: 360px) and (max-width: 1440px) {
+              font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+            }
+          }
+        }
+      }
+
+      .section1Content {
+        padding: 213px 0 250px;
+        width: 100%;
+        margin: auto;
+        max-width: 818px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (min-width: 360px) and (max-width: 1440px) {
+          max-width: calc(310px + (818 - 310) * ((100vw - 360px) / (1440 - 360)));
+        }
+
+        h1 {
+          margin-bottom: 16px;
+          font-size: 74px;
+          color: var(--myRed);
+          font-weight: 600;
+
+          @media (min-width: 360px) and (max-width: 1440px) {
+            font-size: calc(28px + (74 - 28) * ((100vw - 360px) / (1440 - 360)));
+          }
+
+          .h1Span {
+            color: var(--myCream);
+          }
+        }
+
+        h4 {
+          margin-bottom: 40px;
+          color: var(--myCream);
+          font-size: 28px;
+          font-weight: 600;
+          @media (min-width: 360px) and (max-width: 1440px) {
+            font-size: calc(14px + (28 - 14) * ((100vw - 360px) / (1440 - 360)));
+          }
+        }
+
+        .section1MoreLink {
+          font-size: 24px;
+          padding: 16px 62px;
+          color: var(--myCream);
+          border: 3px var(--myRed) solid;
+
+          @media (min-width: 360px) and (max-width: 1440px) {
+            font-size: calc(20px + (24 - 20) * ((100vw - 360px) / (1440 - 360)));
+            padding: calc(12px + (16 - 12) * ((100vw - 360px) / (1440 - 360))) calc(39px + (62 - 39) * ((100vw - 360px) / (1440 - 360))) calc(12px + (16 - 12) * ((100vw - 360px) / (1440 - 360))) calc(39px + (62 - 39) * ((100vw - 360px) / (1440 - 360)))
+          }
+        }
+      }
+    }
+
+    .section1::before,
+    .section1::after {
+      content: ''; /* Необходимо для отображения псевдоэлементов */
+      position: absolute;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      left: 0;
+    }
+
+    .section1::before {
+      top: 0; /* Первая картинка вверху */
+      height: 367px;
+      background-image: url("images/Group3524.png");
+      z-index: 0;
+    }
+
+    .section1::after {
+      bottom: -110px;
+      height: 408px; /* Устанавливаем фиксированную высоту для нижнего изображения */
+      background-image: url("images/Group3523.png");
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    .section2 {
+      background-image: url("images/texture2.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--myRed);
+
+      .section2Wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 180px;
+
+        .section2Text {
+          max-width: 605px;
+          line-height: 32px;
+          font-size: 22px;
+          color: var(--myCream);
+
+          @media (min-width: 360px) and (max-width: 1440px) {
+            max-width: calc(320px + (605 - 320) * ((100vw - 360px) / (1440 - 360)));
+
+          }
+        }
+
+        .section2Roll {
+          position: relative;
+          z-index: 1;
+
+          .section2RollImg {
+            max-width: 605px;
+            width: 100%;
+            height: auto;
+
+
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(320px + (605 - 320) * ((100vw - 360px) / (1440 - 360)));
+
+            }
+          }
+
+          .section2RollText {
+            position: absolute;
+            max-width: 493px;
+            line-height: 24px;
+            width: 100%;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(264px + (493 - 264) * ((100vw - 360px) / (1440 - 360)));
+
+            }
+          }
+        }
+      }
+    }
+
+    .section3 {
+      background-color: var(--myRed);
+
+      .section3Wrapper {
+        position: relative;
+
+        .section3BgImg {
+          position: absolute;
+          top: -258px;
+          right: 318px;
+          z-index: 0;
+        }
+
+        .section3Lecture {
+          display: flex;
+          align-items: start;
+
+          .section3LectureImg {
+            position: relative;
+            z-index: 1;
+            max-width: 817px;
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              max-width: calc(490px + (817 - 490) * ((100vw - 1024px) / (1440 - 1024)));
+
+            }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              max-width: calc(320px + (817 - 320) * ((100vw - 360px) / (1440 - 360)));
+
+            }
+          }
+
+          .section3LectureContent {
+            display: flex;
+            align-items: start;
+
+
+            .lectureNumWrapper {
+              display: flex;
+              flex-direction: column;
+              align-items: end;
+              position: relative;
+              z-index: 1;
+              color: var(--myRed);
+              font-weight: 800;
+
+              .lectureNumText {
+                font-size: 28px;
+              }
+
+              .lectureNum {
+                font-size: 64px;
+              }
+            }
+
+            .lectureTitleWrapper {
+              margin-left: 30px;
+
+              .lectureTitle {
+                font-size: 32px;
+                color: var(--myCream);
+                text-transform: uppercase;
+                font-weight: 500;
+
+              }
+
+              .lectureText {
+                font-size: 16px;
+                margin-bottom: 16px;
+                color: var(--myCream);
+              }
+
+              .lectureMore {
+                background: none;
+                border: none;
+                border-bottom: 1px var(--myCream) solid;
+                color: var(--myCream);
+              }
+            }
+          }
+        }
+
+        .section3Lecture1 {
+          padding-top: 100px;
+        }
+
+        .section3Lecture1,
+        .section3Lecture2,
+        .section3Lecture3,
+        .section3Lecture4,
+        .section3Lecture5,
+        .section3Lecture6,
+        .section3Lecture7, {
+          padding-bottom: 160px;
+        }
+
+        .section3Lecture4,
+        .section3Lecture5,
+        .section3Lecture6, {
+          .section3LectureContent {
+            position: relative;
+
+            .lectureNumWrapper {
+              position: absolute;
+              left: -50px;
+
+            }
+
+            .lectureTitleWrapper {
+              margin-left: 144px;
+            }
+
+
+          }
+
+        }
+
+        .section3Lecture7 {
+          .section3LectureContent {
+            position: relative;
+
+            .lectureNumWrapper {
+              position: absolute;
+              left: -75px;
+
+            }
+
+            .lectureTitleWrapper {
+              margin-left: 144px;
+            }
+
+
+          }
+
+        }
+
+        .section3Lecture8 {
+          margin-bottom: 40px;
+
+          .section3LectureImgWrapper {
+            display: flex;
+            justify-content: center;
+            max-width: 817px;
+            width: 100%;
+
+            .section3LectureImg {
+
+            }
+
+          }
+
+          .section3LectureContent {
+            .lectureTitleWrapper {
+              max-width: 287px;
+
+              .lectureText {
+
+              }
+            }
+          }
+        }
+
+        .section3Summary {
+          position: relative;
+          z-index: 1;
+
+          .section3SummaryTextWrapper {
+            display: flex;
+            position: absolute;
+            top: 48px;
+            left: 107px;
+            color: var(--myCream);
+
+            .section3SummaryText {
+              max-width: 842px;
+              margin: 0 12px;
+              //letter-spacing: -0.03em;
+              font-size: 16px;
+              line-height: 24px;;
+            }
+          }
+
+          .headerBtn {
+            color: var(--myCream);
+            background: none;
+            border: 3px var(--myCream) solid;
+            padding: 12px 20px;
+            font-size: 16px;
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: 0;
+            max-width: 200px;
+            width: 100%;
+
+            @media (min-width: 360px) and (max-width: 1440px) {
+              font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+            }
+          }
+        }
+
+
+      }
+    }
+
+    .section4 {
+      background-image: url("images/texture3.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--myRed);
+      position: relative;
+      z-index: 1;
+
+      .section4Wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 230px 0 330px;
+
+        .section4CartWrapper1 {
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          margin-bottom: 40px;
+
+          .section4Cart1 {
+            background-image: url("images/Group3549.png");
+            position: relative;
+            width: 100%;
+            max-width: 393px;
+            height: 353px;
+
+            .section4Cart1ContentWrapper {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+
+              .section4Cart1Num {
+                font-size: 32px;
+                position: absolute;
+                top: -46px;
+                right: -40px;
+              }
+
+              .section4Cart1Title {
+                color: var(--myRed);
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              }
+
+            }
+
+          }
+
+          .section4Cart2 {
+            background-image: url("images/Group3531.png");
+            position: relative;
+            width: 100%;
+            max-width: 393px;
+            height: 357px;
+
+            .section4Cart2ContentWrapper {
+              position: absolute;
+              left: 50%;
+              top: 57%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+
+              .section4Cart2Num {
+                font-size: 32px;
+                position: absolute;
+                top: -46px;
+                right: -15px;
+              }
+
+              .section4Cart2Title {
+                color: var(--myRed);
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              }
+
+            }
+          }
+
+        }
+
+        .section4AboutCarts {
+          max-width: 716px;
+          text-align: center;
+          align-self: center;
+
+          h4, {
+            font-size: 64px;
+            color: var(--myCream);
+          }
+
+          span {
+            font-size: 64px;
+            color: var(--myRed);
+          }
+        }
+
+        .section4CartWrapper2 {
+          display: flex;
+          justify-content: space-between;
+
+          .section4Cart3 {
+            background-image: url("images/Group3533.png");
+            position: relative;
+            width: 100%;
+            max-width: 393px;
+            height: 380px;
+
+            .section4Cart3ContentWrapper {
+              position: absolute;
+              width: 100%;
+              max-width: 357px;
+              left: 50%;
+              top: 60%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+
+              .section4Cart3Num {
+                font-size: 32px;
+                position: absolute;
+                top: -46px;
+                right: -8px;
+              }
+
+              .section4Cart3Title {
+                color: var(--myRed);
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              }
+
+            }
+          }
+
+          .section4Cart4 {
+            background-image: url("images/Group3534.png");
+            position: relative;
+            width: 100%;
+            top: 100px;
+            max-width: 393px;
+            height: 375px;
+
+            .section4Cart4ContentWrapper {
+              position: absolute;
+              width: 100%;
+              max-width: 357px;
+              left: 50%;
+              top: 60%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+
+              .section4Cart4Num {
+                font-size: 32px;
+                position: absolute;
+                top: -35px;
+                right: -8px;
+              }
+
+              .section4Cart4Title {
+                color: var(--myRed);
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              }
+
+            }
+          }
+
+          .section4Cart5 {
+            background-image: url("images/Group3535.png");
+            position: relative;
+            width: 100%;
+            max-width: 393px;
+            height: 407px;
+
+            .section4Cart5ContentWrapper {
+              position: absolute;
+              width: 100%;
+              max-width: 260px;
+              left: 50%;
+              top: 57%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+
+              .section4Cart5Num {
+                font-size: 32px;
+                position: absolute;
+                top: -46px;
+                right: -13px;
+              }
+
+              .section4Cart5Title {
+                color: var(--myRed);
+                font-size: 32px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    .section4::before,
+    .section4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    .section4::before {
+      top: 0;
+      background-image: url("images/Group3530.png");
+      height: 150px;
+    }
+
+    .section4::after {
+      bottom: 0;
+      background-image: url("images/Group3544.png");
+      height: 150px;
+    }
+
+    .section5 {
+      background-image: url("images/texture4.png");
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+      padding: 80px 0 312px;
+
+      .section5Wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .section5LeftContentWrapper {
+          display: flex;
+          max-width: 605px;
+
+
+          flex-direction: column;
+
+          .section5LeftContentWrapperTextTitle {
+            font-size: 64px;
+            color: var(--myCream);
+            margin-bottom: 20px;
+
+            span {
+              color: var(--myBlack);
+            }
+          }
+
+          .section5LeftContentWrapperTextName {
+            font-size: 32px;
+            color: var(--myCream);
+          }
+
+          .section5LeftContentWrapperTextDate {
+            font-size: 16px;
+            color: var(--myCream);
+            margin-bottom: 20px;
+          }
+
+          .section5LeftContentWrapperTextDescription {
+            font-size: 22px;
+            line-height: 32px;
+            color: var(--myCream);
+          }
+
+          .section5LeftContentImg {
+            position: absolute;
+            left: 0;
+            top: 644px;
+          }
+        }
+
+        .section5RightContentWrapper {
+          display: flex;
+          flex-direction: column;
+          max-width: 499px;
+
+          .section5RightContentPhotoWrapper {
+            position: relative;
+
+            .section5RightContentPhoto {
+              margin-bottom: 14px;
+            }
+
+            .section5RightContentPhotoDescr1Wrapper {
+              background-image: url("images/paper1.1.png");
+              width: 452px;
+              height: 152px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              position: absolute;
+              top: 270px;
+              left: -100px;
+              z-index: 0;
+
+              .section5RightContentPhotoDescr1 {
+                position: absolute;
+                width: 100%;
+                max-width: 402px;
+                left: 55%;
+                top: 54%;
+                transform: translate(-50%, -50%) rotate(5deg);
+
+                .quote {
+                  margin-top: 5px;
+                  color: var(--myRed);
+                }
+              }
+            }
+
+            .section5RightContentPhotoDescr2Wrapper {
+              background-image: url("images/paper1.2.png");
+              width: 452px;
+              height: 152px;
+              background-repeat: no-repeat;
+              background-size: cover;
+              position: relative;
+              z-index: 2;
+              margin-bottom: 124px;
+
+              .section5RightContentPhotoDescr2 {
+                position: absolute;
+                width: 100%;
+                max-width: 402px;
+                left: 53%;
+                top: 54%;
+                transform: translate(-50%, -50%) rotate(-2deg);
+
+                .quote {
+                  margin-top: 5px;
+                  color: var(--myRed);
+                }
+              }
+            }
+          }
+
+          .priceContentWrapper {
+            .priceWrapperTitle {
+              font-size: 64px;
+              color: var(--myCream);
+
+              span {
+                color: var(--myRed);
+              }
+            }
+
+            .priceWrapper {
+              display: flex;
+              align-items: center;
+              position: relative;
+              font-size: 22px;
+              color: var(--myCream);
+
+              .line {
+                width: 97px;
+                height: 1px;
+                background-color: var(--myCream);
+                margin: 0 4px 0 12px;
+              }
+
+              .circle {
+                width: 7px;
+                height: 7px;
+                background-color: var(--myRed);
+                border-radius: 50%;
+              }
+
+              .priceBg {
+                margin-top: -9px;
+              }
+
+              .price {
+                position: absolute;
+                right: 103px;
+              }
+            }
+
+            .orderBtn {
+              color: var(--myCream);
+              background: none;
+              border: 3px var(--myRed) solid;
+              padding: 16px 55px;
+              font-size: 16px;
+              z-index: 1;
+              @media (min-width: 360px) and (max-width: 1440px) {
+                font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section5::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 117px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+      bottom: 0;
+      background-image: url("images/Group3545.png");
+    }
+
+    .section6 {
+      background-image: url("images/texture6.png");
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+      padding: 80px 0;
+
+      .section6Wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .section6TitleWrapper {
+          h4 {
+            font-size: 64px;
+            color: var(--myCream);
+            margin-bottom: 60px;
+
+            span {
+              color: var(--myBlack);
+            }
+          }
+        }
+
+        .section6MainContentWrapper {
+          display: flex;
+          justify-content: space-between;
+
+          .section6MainContentWrapperLeft {
+            max-width: 605px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+
+            .section6MainContentWrapperLeftCart {
+              display: flex;
+              align-items: center;
+              margin-bottom: 28px;
+
+              h4 {
+                font-size: 28px;
+                color: var(--myCream);
+                padding: 0 16px;
+                font-weight: normal;
+              }
+            }
+            .section6MainContentWrapperLeftCartDescription1{
+              margin-bottom: 60px;
+              letter-spacing: -0.03em;
+              color: var(--myCream);
+            }
+            .section6MainContentWrapperLeftCartDescription2{
+              color: var(--myCream);
+            }
+          }
+
+          .section6MainContentWrapperRight {
+            max-width: 605px;
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+
+            .section6MainContentWrapperRightCart {
+              display: flex;
+              align-items: center;
+              margin-bottom: 28px;
+
+              h4 {
+                font-size: 28px;
+                color: var(--myCream);
+                padding: 0 16px;
+                font-weight: normal;
+              }
+            }
+            .section6MainContentWrapperRightCartDescription1{
+              margin-bottom: 60px;
+              letter-spacing: -0.03em;
+              color: var(--myCream);
+            }
+            .section6MainContentWrapperRightCartDescription2{
+              color: var(--myCream);
+            }
+
+          }
+        }
+
+        .section6ImgMap {
+          position: absolute;
+          top: 31px;
+          right: 0;
+          z-index: 0;
+        }
+      }
+    }
+
+    footer {
+      background-color: var(--myBlack);
+      padding: 30px 0;
+
+      .footerWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footerWrapperLeftContentWrapper {
+          display: flex;
+          align-items: center;
+          h4,a{
+            color: var(--myCream);
+          }
+
+          .footerWrapperLeftContentWrapperPost {
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+            h4{
+              margin-right: 12px;
+            }
+          }
+
+          .footerWrapperLeftContentWrapperTg {
+            display: flex;
+            align-items: center;
+            h4{
+              margin-right: 12px;
+            }
+          }
+        }
+        .footerWrapperRightContentWrapper{
+          a{
+            color: var(--myRed);
+          }
+          .politic{
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+  }
+}
