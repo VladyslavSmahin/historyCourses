@@ -68,10 +68,11 @@ html {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
             @media (min-width: 1024px) and (max-width: 1440px) {
-               max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
+              max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
 
             }
-            img{
+
+            img {
               position: absolute;
               max-width: 284px;
 
@@ -82,6 +83,7 @@ html {
                 max-width: calc(100px + (170 - 100) * ((100vw - 360px) / (1024 - 360)));
               }
             }
+
             .logoP1 {
               color: var(--myCream);
               font-weight: 700;
@@ -106,10 +108,11 @@ html {
               display: flex;
               align-items: center;
               margin-left: 8px;
-              img{
+
+              img {
                 max-width: 40px;
                 height: 1px;
-                margin:0 4px ;
+                margin: 0 4px;
                 position: relative;
                 top: 1px;
                 @media (min-width: 1024px) and (max-width: 1440px) {
@@ -136,6 +139,7 @@ html {
             }
 
           }
+
           ul li:last-child img {
             max-width: 105px;
             @media (min-width: 1024px) and (max-width: 1440px) {
@@ -244,11 +248,17 @@ html {
       background-size: cover;
       background-color: var(--myRed);
 
+
       .section2Wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 180px;
+
+        @media (min-width: 360px) and (max-width: 768px) {
+          //max-width: calc(320px + (605 - 320) * ((100vw - 360px) / (1440 - 360)));
+          flex-direction: column;
+        }
 
         .section2Text {
           max-width: 605px;
@@ -256,9 +266,13 @@ html {
           font-size: 22px;
           color: var(--myCream);
 
-          @media (min-width: 360px) and (max-width: 1440px) {
-            max-width: calc(320px + (605 - 320) * ((100vw - 360px) / (1440 - 360)));
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            max-width: calc(400px + (605 - 400) * ((100vw - 1024px) / (1440 - 1024)));
 
+          }
+          @media (min-width: 360px) and (max-width: 1024px) {
+            max-width: calc(320px + (600 - 320) * ((100vw - 360px) / (1024 - 360)));
+            margin-bottom: 40px;
           }
         }
 
@@ -276,20 +290,31 @@ html {
               max-width: calc(320px + (605 - 320) * ((100vw - 360px) / (1440 - 360)));
 
             }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              height: 500px;
+              width: 350px;
+            }
           }
 
           .section2RollText {
             position: absolute;
             max-width: 493px;
-            line-height: 24px;
             width: 100%;
             top: 42%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
-            @media (min-width: 360px) and (max-width: 1440px) {
-              max-width: calc(264px + (493 - 264) * ((100vw - 360px) / (1440 - 360)));
+            line-height: 22px;
 
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              max-width: calc(264px + (493 - 264) * ((100vw - 360px) / (1440 - 360)));
+              font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (1440 - 360)));
+              line-height: 19px;
+            }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              max-width: calc(264px + (300 - 264) * ((100vw - 360px) / (1024 - 360)));
+              margin-bottom: 40px;
+              top: 45%;
             }
           }
         }
@@ -302,16 +327,30 @@ html {
       .section3Wrapper {
         position: relative;
 
+        @media (min-width: 360px) and (max-width: 1024px) {
+          padding-bottom: 100px;
+        }
+
         .section3BgImg {
           position: absolute;
           top: -258px;
           right: 318px;
           z-index: 0;
+          @media (min-width: 1024px) and (max-width: 1440px) {
+            right: calc(276px + (318 - 276) * ((100vw - 1024px) / (1440 - 1024)));
+            max-width: calc(140px + (176 - 140) * ((100vw - 1024px) / (1440 - 1024)));
+
+          }
+          @media (min-width: 360px) and (max-width: 1024px) {
+            display: none
+          }
         }
 
         .section3Lecture {
           display: flex;
           align-items: start;
+          position: relative;
+          z-index: 1;
 
           .section3LectureImg {
             position: relative;
@@ -319,7 +358,7 @@ html {
             max-width: 817px;
 
             @media (min-width: 1024px) and (max-width: 1440px) {
-              max-width: calc(490px + (817 - 490) * ((100vw - 1024px) / (1440 - 1024)));
+              max-width: calc(500px + (817 - 500) * ((100vw - 1024px) / (1440 - 1024)));
 
             }
             @media (min-width: 360px) and (max-width: 1024px) {
@@ -331,7 +370,12 @@ html {
           .section3LectureContent {
             display: flex;
             align-items: start;
+            position: relative;
 
+            @media (min-width: 360px) and (max-width: 1024px) {
+              //max-width: calc(320px + (817 - 320) * ((100vw - 360px) / (1440 - 360)));
+              flex-direction: column;
+            }
 
             .lectureNumWrapper {
               display: flex;
@@ -353,19 +397,27 @@ html {
 
             .lectureTitleWrapper {
               margin-left: 30px;
+              z-index: 2;
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                margin-left: calc(19px + (30 - 10) * ((100vw - 1024px) / (1440 - 1024)));
+
+              }
 
               .lectureTitle {
                 font-size: 32px;
                 color: var(--myCream);
                 text-transform: uppercase;
                 font-weight: 500;
-
+                margin-bottom: 20px;
               }
 
               .lectureText {
                 font-size: 16px;
                 margin-bottom: 16px;
                 color: var(--myCream);
+                @media (min-width: 360px) and (max-width: 1024px) {
+                  margin-bottom: 50px;
+                }
               }
 
               .lectureMore {
@@ -376,6 +428,54 @@ html {
               }
             }
           }
+        }
+
+        .section3Lecture::before {
+          content: "";
+          position: absolute;
+          top: 0;
+
+          width: 100vw;
+          height: 230px;
+          background-color: var(--myBlack); /* Использовать переменную для цвета фона */
+          z-index: 0;
+          overflow: hidden;
+
+          @media (min-width: 1025px) and (max-width: 1440px) {
+            display: none;
+          }
+        }
+
+        .section3Lecture1::before {
+          top: 390px;
+        }
+
+        .section3Lecture2::before {
+          top: 288px;
+        }
+
+        .section3Lecture3::before {
+          top: 289px;
+        }
+
+        .section3Lecture4::before {
+          top: 290px;
+        }
+
+        .section3Lecture5::before {
+          top: 290px;
+        }
+
+        .section3Lecture6::before {
+          top: 290px;
+        }
+
+        .section3Lecture7::before {
+          top: 289px;
+        }
+
+        .section3Lecture8::before {
+          top: 270px;
         }
 
         .section3Lecture1 {
@@ -390,6 +490,24 @@ html {
         .section3Lecture6,
         .section3Lecture7, {
           padding-bottom: 160px;
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            padding-bottom: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+        }
+
+        .section3Lecture8 {
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            //margin-left: calc(19px + (30 - 10) * ((100vw - 1024px) / (1440 - 1024)));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
         }
 
         .section3Lecture4,
@@ -401,16 +519,29 @@ html {
             .lectureNumWrapper {
               position: absolute;
               left: -50px;
+              @media (min-width: 360px) and (max-width: 1024px) {
+                position: relative;
+                left: 0px;
+              }
 
             }
 
             .lectureTitleWrapper {
               margin-left: 144px;
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-left: 0;
+              }
             }
 
 
           }
 
+          @media (min-width: 360px) and (max-width: 1024px) {
+            //margin-left: calc(19px + (30 - 10) * ((100vw - 1024px) / (1440 - 1024)));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
         }
 
         .section3Lecture7 {
@@ -420,11 +551,18 @@ html {
             .lectureNumWrapper {
               position: absolute;
               left: -75px;
-
+              @media (min-width: 360px) and (max-width: 1024px) {
+                position: relative;
+                left: 0px;
+              }
             }
 
             .lectureTitleWrapper {
               margin-left: 144px;
+
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-left: 0px;
+              }
             }
 
 
@@ -434,6 +572,9 @@ html {
 
         .section3Lecture8 {
           margin-bottom: 40px;
+          @media (min-width: 360px) and (max-width: 1024px) {
+            margin-bottom: 0px;
+          }
 
           .section3LectureImgWrapper {
             display: flex;
@@ -451,6 +592,10 @@ html {
             .lectureTitleWrapper {
               max-width: 287px;
 
+              @media (min-width: 360px) and (max-width: 1024px) {
+                max-width: 885px;
+              }
+
               .lectureText {
 
               }
@@ -462,12 +607,29 @@ html {
           position: relative;
           z-index: 1;
 
+          .frame {
+
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              max-width: calc(885px + (1240 - 885) * ((100vw - 1024px) / (1440 - 1024)));
+            }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              display: none;
+            }
+
+          }
+
           .section3SummaryTextWrapper {
             display: flex;
             position: absolute;
             top: 48px;
             left: 107px;
             color: var(--myCream);
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              position: relative;
+              top: 0;
+              left: 0;
+            }
 
             .section3SummaryText {
               max-width: 842px;
@@ -495,6 +657,11 @@ html {
             @media (min-width: 360px) and (max-width: 1440px) {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              position: relative;
+              top: 81px;
+              left: 50%;
+            }
           }
         }
 
@@ -515,11 +682,41 @@ html {
         flex-direction: column;
         padding: 230px 0 330px;
 
-        .section4CartWrapper1 {
+        .section4CartWrapper {
           display: flex;
           width: 100%;
           justify-content: space-around;
           margin-bottom: 40px;
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            //line-height: calc(18px + (32 - 18) * ((100vw - 360px) / (1024 - 360))) ;
+            align-items: center;
+            flex-direction: column;
+
+          }
+
+          .section4Cart {
+            .section4CartContentWrapper {
+              max-width: 222px !important;
+
+              .section4CartTitle {
+                color: #FFFFFF;
+                @media (min-width: 1024px) and (max-width: 1440px) {
+                  font-size: calc(22px + (32 - 22) * ((100vw - 1024px) / (1440 - 1024))) !important;
+
+                }
+              }
+
+              .section4CartDescription {
+
+                @media (min-width: 1024px) and (max-width: 1440px) {
+                  line-height: calc(18px + (32 - 18) * ((100vw - 1024px) / (1440 - 1024))) !important;
+
+                }
+              }
+            }
+          }
+
 
           .section4Cart1 {
             background-image: url("images/Group3549.png");
@@ -586,10 +783,22 @@ html {
 
         }
 
+        .section4CartWrapper1 {
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+          order: 2;
+
+          }
+        }
+
         .section4AboutCarts {
           max-width: 716px;
           text-align: center;
           align-self: center;
+          @media (min-width: 360px) and (max-width: 1024px) {
+            order: 1;
+
+          }
 
           h4, {
             font-size: 64px;
@@ -605,6 +814,11 @@ html {
         .section4CartWrapper2 {
           display: flex;
           justify-content: space-between;
+          @media (min-width: 360px) and (max-width: 1024px) {
+            order: 3;
+
+          }
+
 
           .section4Cart3 {
             background-image: url("images/Group3533.png");
@@ -646,6 +860,10 @@ html {
             top: 100px;
             max-width: 393px;
             height: 375px;
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+
+            }
 
             .section4Cart4ContentWrapper {
               position: absolute;
@@ -968,12 +1186,14 @@ html {
                 font-weight: normal;
               }
             }
-            .section6MainContentWrapperLeftCartDescription1{
+
+            .section6MainContentWrapperLeftCartDescription1 {
               margin-bottom: 60px;
               letter-spacing: -0.03em;
               color: var(--myCream);
             }
-            .section6MainContentWrapperLeftCartDescription2{
+
+            .section6MainContentWrapperLeftCartDescription2 {
               color: var(--myCream);
             }
           }
@@ -996,12 +1216,14 @@ html {
                 font-weight: normal;
               }
             }
-            .section6MainContentWrapperRightCartDescription1{
+
+            .section6MainContentWrapperRightCartDescription1 {
               margin-bottom: 60px;
               letter-spacing: -0.03em;
               color: var(--myCream);
             }
-            .section6MainContentWrapperRightCartDescription2{
+
+            .section6MainContentWrapperRightCartDescription2 {
               color: var(--myCream);
             }
 
@@ -1029,7 +1251,8 @@ html {
         .footerWrapperLeftContentWrapper {
           display: flex;
           align-items: center;
-          h4,a{
+
+          h4, a {
             color: var(--myCream);
           }
 
@@ -1037,7 +1260,8 @@ html {
             display: flex;
             align-items: center;
             margin-right: 60px;
-            h4{
+
+            h4 {
               margin-right: 12px;
             }
           }
@@ -1045,16 +1269,19 @@ html {
           .footerWrapperLeftContentWrapperTg {
             display: flex;
             align-items: center;
-            h4{
+
+            h4 {
               margin-right: 12px;
             }
           }
         }
-        .footerWrapperRightContentWrapper{
-          a{
+
+        .footerWrapperRightContentWrapper {
+          a {
             color: var(--myRed);
           }
-          .politic{
+
+          .politic {
             margin-right: 24px;
           }
         }

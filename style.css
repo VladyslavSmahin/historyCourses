@@ -246,15 +246,26 @@ html body .section2 .section2Wrapper {
   align-items: center;
   padding-top: 180px;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html body .section2 .section2Wrapper {
+    flex-direction: column;
+  }
+}
 html body .section2 .section2Wrapper .section2Text {
   max-width: 605px;
   line-height: 32px;
   font-size: 22px;
   color: var(--myCream);
 }
-@media (min-width: 360px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   html body .section2 .section2Wrapper .section2Text {
-    max-width: calc(320px + 285 * (100vw - 360px) / 1080);
+    max-width: calc(400px + 205 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section2 .section2Wrapper .section2Text {
+    max-width: calc(320px + 280 * (100vw - 360px) / 664);
+    margin-bottom: 40px;
   }
 }
 html body .section2 .section2Wrapper .section2Roll {
@@ -271,19 +282,34 @@ html body .section2 .section2Wrapper .section2Roll .section2RollImg {
     max-width: calc(320px + 285 * (100vw - 360px) / 1080);
   }
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section2 .section2Wrapper .section2Roll .section2RollImg {
+    height: 500px;
+    width: 350px;
+  }
+}
 html body .section2 .section2Wrapper .section2Roll .section2RollText {
   position: absolute;
   max-width: 493px;
-  line-height: 24px;
   width: 100%;
   top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  line-height: 22px;
 }
-@media (min-width: 360px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
   html body .section2 .section2Wrapper .section2Roll .section2RollText {
     max-width: calc(264px + 229 * (100vw - 360px) / 1080);
+    font-size: calc(14px + 2 * (100vw - 360px) / 1080);
+    line-height: 19px;
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section2 .section2Wrapper .section2Roll .section2RollText {
+    max-width: calc(264px + 36 * (100vw - 360px) / 664);
+    margin-bottom: 40px;
+    top: 45%;
   }
 }
 html body .section3 {
@@ -292,15 +318,33 @@ html body .section3 {
 html body .section3 .section3Wrapper {
   position: relative;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper {
+    padding-bottom: 100px;
+  }
+}
 html body .section3 .section3Wrapper .section3BgImg {
   position: absolute;
   top: -258px;
   right: 318px;
   z-index: 0;
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section3 .section3Wrapper .section3BgImg {
+    right: calc(276px + 42 * (100vw - 1024px) / 416);
+    max-width: calc(140px + 36 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3BgImg {
+    display: none;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture {
   display: flex;
   align-items: start;
+  position: relative;
+  z-index: 1;
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureImg {
   position: relative;
@@ -309,7 +353,7 @@ html body .section3 .section3Wrapper .section3Lecture .section3LectureImg {
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   html body .section3 .section3Wrapper .section3Lecture .section3LectureImg {
-    max-width: calc(490px + 327 * (100vw - 1024px) / 416);
+    max-width: calc(500px + 317 * (100vw - 1024px) / 416);
   }
 }
 @media (min-width: 360px) and (max-width: 1024px) {
@@ -320,6 +364,12 @@ html body .section3 .section3Wrapper .section3Lecture .section3LectureImg {
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent {
   display: flex;
   align-items: start;
+  position: relative;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture .section3LectureContent {
+    flex-direction: column;
+  }
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureNumWrapper {
   display: flex;
@@ -338,23 +388,74 @@ html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .l
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper {
   margin-left: 30px;
+  z-index: 2;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper {
+    margin-left: calc(19px + 20 * (100vw - 1024px) / 416);
+  }
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureTitle {
   font-size: 32px;
   color: var(--myCream);
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: 20px;
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureText {
   font-size: 16px;
   margin-bottom: 16px;
   color: var(--myCream);
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureText {
+    margin-bottom: 50px;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureMore {
   background: none;
   border: none;
   border-bottom: 1px var(--myCream) solid;
   color: var(--myCream);
+}
+html body .section3 .section3Wrapper .section3Lecture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 230px;
+  background-color: var(--myBlack); /* Использовать переменную для цвета фона */
+  z-index: 0;
+  overflow: hidden;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  html body .section3 .section3Wrapper .section3Lecture::before {
+    display: none;
+  }
+}
+html body .section3 .section3Wrapper .section3Lecture1::before {
+  top: 390px;
+}
+html body .section3 .section3Wrapper .section3Lecture2::before {
+  top: 288px;
+}
+html body .section3 .section3Wrapper .section3Lecture3::before {
+  top: 289px;
+}
+html body .section3 .section3Wrapper .section3Lecture4::before {
+  top: 290px;
+}
+html body .section3 .section3Wrapper .section3Lecture5::before {
+  top: 290px;
+}
+html body .section3 .section3Wrapper .section3Lecture6::before {
+  top: 290px;
+}
+html body .section3 .section3Wrapper .section3Lecture7::before {
+  top: 289px;
+}
+html body .section3 .section3Wrapper .section3Lecture8::before {
+  top: 270px;
 }
 html body .section3 .section3Wrapper .section3Lecture1 {
   padding-top: 100px;
@@ -368,6 +469,27 @@ html body .section3 .section3Wrapper .section3Lecture6,
 html body .section3 .section3Wrapper .section3Lecture7 {
   padding-bottom: 160px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture1,
+  html body .section3 .section3Wrapper .section3Lecture2,
+  html body .section3 .section3Wrapper .section3Lecture3,
+  html body .section3 .section3Wrapper .section3Lecture4,
+  html body .section3 .section3Wrapper .section3Lecture5,
+  html body .section3 .section3Wrapper .section3Lecture6,
+  html body .section3 .section3Wrapper .section3Lecture7 {
+    padding-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture4 .section3LectureContent,
 html body .section3 .section3Wrapper .section3Lecture5 .section3LectureContent,
 html body .section3 .section3Wrapper .section3Lecture6 .section3LectureContent {
@@ -379,10 +501,34 @@ html body .section3 .section3Wrapper .section3Lecture6 .section3LectureContent .
   position: absolute;
   left: -50px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture4 .section3LectureContent .lectureNumWrapper,
+  html body .section3 .section3Wrapper .section3Lecture5 .section3LectureContent .lectureNumWrapper,
+  html body .section3 .section3Wrapper .section3Lecture6 .section3LectureContent .lectureNumWrapper {
+    position: relative;
+    left: 0px;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture4 .section3LectureContent .lectureTitleWrapper,
 html body .section3 .section3Wrapper .section3Lecture5 .section3LectureContent .lectureTitleWrapper,
 html body .section3 .section3Wrapper .section3Lecture6 .section3LectureContent .lectureTitleWrapper {
   margin-left: 144px;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture4 .section3LectureContent .lectureTitleWrapper,
+  html body .section3 .section3Wrapper .section3Lecture5 .section3LectureContent .lectureTitleWrapper,
+  html body .section3 .section3Wrapper .section3Lecture6 .section3LectureContent .lectureTitleWrapper {
+    margin-left: 0;
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture4,
+  html body .section3 .section3Wrapper .section3Lecture5,
+  html body .section3 .section3Wrapper .section3Lecture6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 html body .section3 .section3Wrapper .section3Lecture7 .section3LectureContent {
   position: relative;
@@ -391,11 +537,27 @@ html body .section3 .section3Wrapper .section3Lecture7 .section3LectureContent .
   position: absolute;
   left: -75px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture7 .section3LectureContent .lectureNumWrapper {
+    position: relative;
+    left: 0px;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture7 .section3LectureContent .lectureTitleWrapper {
   margin-left: 144px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture7 .section3LectureContent .lectureTitleWrapper {
+    margin-left: 0px;
+  }
+}
 html body .section3 .section3Wrapper .section3Lecture8 {
   margin-bottom: 40px;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture8 {
+    margin-bottom: 0px;
+  }
 }
 html body .section3 .section3Wrapper .section3Lecture8 .section3LectureImgWrapper {
   display: flex;
@@ -406,9 +568,24 @@ html body .section3 .section3Wrapper .section3Lecture8 .section3LectureImgWrappe
 html body .section3 .section3Wrapper .section3Lecture8 .section3LectureContent .lectureTitleWrapper {
   max-width: 287px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Lecture8 .section3LectureContent .lectureTitleWrapper {
+    max-width: 885px;
+  }
+}
 html body .section3 .section3Wrapper .section3Summary {
   position: relative;
   z-index: 1;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section3 .section3Wrapper .section3Summary .frame {
+    max-width: calc(885px + 355 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Summary .frame {
+    display: none;
+  }
 }
 html body .section3 .section3Wrapper .section3Summary .section3SummaryTextWrapper {
   display: flex;
@@ -416,6 +593,13 @@ html body .section3 .section3Wrapper .section3Summary .section3SummaryTextWrappe
   top: 48px;
   left: 107px;
   color: var(--myCream);
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Summary .section3SummaryTextWrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 html body .section3 .section3Wrapper .section3Summary .section3SummaryTextWrapper .section3SummaryText {
   max-width: 842px;
@@ -442,6 +626,13 @@ html body .section3 .section3Wrapper .section3Summary .headerBtn {
     font-size: calc(13px + 7 * (100vw - 360px) / 1080);
   }
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section3 .section3Wrapper .section3Summary .headerBtn {
+    position: relative;
+    top: 81px;
+    left: 50%;
+  }
+}
 html body .section4 {
   background-image: url("images/texture3.png");
   background-repeat: no-repeat;
@@ -455,68 +646,100 @@ html body .section4 .section4Wrapper {
   flex-direction: column;
   padding: 230px 0 330px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 {
+html body .section4 .section4Wrapper .section4CartWrapper {
   display: flex;
   width: 100%;
   justify-content: space-around;
   margin-bottom: 40px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart1 {
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section4 .section4Wrapper .section4CartWrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart .section4CartContentWrapper {
+  max-width: 222px !important;
+}
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart .section4CartContentWrapper .section4CartTitle {
+  color: #FFFFFF;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section4 .section4Wrapper .section4CartWrapper .section4Cart .section4CartContentWrapper .section4CartTitle {
+    font-size: calc(22px + 10 * (100vw - 1024px) / 416) !important;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section4 .section4Wrapper .section4CartWrapper .section4Cart .section4CartContentWrapper .section4CartDescription {
+    line-height: calc(18px + 14 * (100vw - 1024px) / 416) !important;
+  }
+}
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 {
   background-image: url("images/Group3549.png");
   position: relative;
   width: 100%;
   max-width: 393px;
   height: 353px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart1 .section4Cart1ContentWrapper {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Num {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Num {
   font-size: 32px;
   position: absolute;
   top: -46px;
   right: -40px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Title {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Title {
   color: var(--myRed);
   font-size: 32px;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart2 {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 {
   background-image: url("images/Group3531.png");
   position: relative;
   width: 100%;
   max-width: 393px;
   height: 357px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart2 .section4Cart2ContentWrapper {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper {
   position: absolute;
   left: 50%;
   top: 57%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Num {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Num {
   font-size: 32px;
   position: absolute;
   top: -46px;
   right: -15px;
 }
-html body .section4 .section4Wrapper .section4CartWrapper1 .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Title {
+html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Title {
   color: var(--myRed);
   font-size: 32px;
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section4 .section4Wrapper .section4CartWrapper1 {
+    order: 2;
+  }
+}
 html body .section4 .section4Wrapper .section4AboutCarts {
   max-width: 716px;
   text-align: center;
   align-self: center;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section4 .section4Wrapper .section4AboutCarts {
+    order: 1;
+  }
 }
 html body .section4 .section4Wrapper .section4AboutCarts h4 {
   font-size: 64px;
@@ -529,6 +752,11 @@ html body .section4 .section4Wrapper .section4AboutCarts span {
 html body .section4 .section4Wrapper .section4CartWrapper2 {
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section4 .section4Wrapper .section4CartWrapper2 {
+    order: 3;
+  }
 }
 html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart3 {
   background-image: url("images/Group3533.png");
