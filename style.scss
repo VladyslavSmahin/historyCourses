@@ -59,16 +59,37 @@ html {
           .logo {
             font-size: 20px;
             z-index: 1;
+            position: relative;
+            width: 100%;
+            max-width: 284px;
+
+
             @media (min-width: 360px) and (max-width: 1440px) {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
+            @media (min-width: 1024px) and (max-width: 1440px) {
+               max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
 
+            }
+            img{
+              position: absolute;
+              max-width: 284px;
+
+              @media (min-width: 1024px) and (max-width: 1440px) {
+                max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
+              }
+              @media (min-width: 360px) and (max-width: 1024px) {
+                max-width: calc(100px + (170 - 100) * ((100vw - 360px) / (1024 - 360)));
+              }
+            }
             .logoP1 {
               color: var(--myCream);
+              font-weight: 700;
             }
 
             .logoP2 {
               color: var(--myRed);
+              font-weight: 700;
             }
           }
 
@@ -82,29 +103,30 @@ html {
 
             li {
               position: relative;
-              padding-left: 4px;
+              display: flex;
+              align-items: center;
+              margin-left: 8px;
+              img{
+                max-width: 40px;
+                height: 1px;
+                margin:0 4px ;
+                position: relative;
+                top: 1px;
+                @media (min-width: 1024px) and (max-width: 1440px) {
+                  max-width: calc(5px + (40 - 5) * ((100vw - 1024px) / (1440 - 1024)));
+                }
+              }
 
               a {
                 color: var(--myCream);
                 position: relative;
-              }
-
-              a::before {
-                content: "";
-                position: absolute;
-                left: -21px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 1px;
-                background-color: var(--myCream);
               }
             }
 
             li::before {
               content: '';
               position: absolute;
-              left: -4px;
+              left: -10px;
               top: 50%;
               transform: translateY(-50%);
               width: 7px;
@@ -114,9 +136,15 @@ html {
             }
 
           }
+          ul li:last-child img {
+            max-width: 105px;
+            @media (min-width: 1024px) and (max-width: 1440px) {
+              max-width: calc(5px + (105 - 5) * ((100vw - 1024px) / (1440 - 1024)));
+            }
+          }
 
           ul li:not(:last-child) {
-            margin-right: 48px;
+            margin-right: 4px;
           }
 
           .headerBtn {

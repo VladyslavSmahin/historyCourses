@@ -59,17 +59,41 @@ html body .section1 header .headerWrapper {
 html body .section1 header .headerWrapper .logo {
   font-size: 20px;
   z-index: 1;
+  position: relative;
+  width: 100%;
+  max-width: 284px;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section1 header .headerWrapper .logo {
     font-size: calc(13px + 7 * (100vw - 360px) / 1080);
   }
 }
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section1 header .headerWrapper .logo {
+    max-width: calc(170px + 114 * (100vw - 1024px) / 416);
+  }
+}
+html body .section1 header .headerWrapper .logo img {
+  position: absolute;
+  max-width: 284px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section1 header .headerWrapper .logo img {
+    max-width: calc(170px + 114 * (100vw - 1024px) / 416);
+  }
+}
+@media (min-width: 360px) and (max-width: 1024px) {
+  html body .section1 header .headerWrapper .logo img {
+    max-width: calc(100px + 70 * (100vw - 360px) / 664);
+  }
+}
 html body .section1 header .headerWrapper .logo .logoP1 {
   color: var(--myCream);
+  font-weight: 700;
 }
 html body .section1 header .headerWrapper .logo .logoP2 {
   color: var(--myRed);
+  font-weight: 700;
 }
 html body .section1 header .headerWrapper ul {
   display: flex;
@@ -82,26 +106,30 @@ html body .section1 header .headerWrapper ul {
 }
 html body .section1 header .headerWrapper ul li {
   position: relative;
-  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+html body .section1 header .headerWrapper ul li img {
+  max-width: 40px;
+  height: 1px;
+  margin: 0 4px;
+  position: relative;
+  top: 1px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section1 header .headerWrapper ul li img {
+    max-width: calc(5px + 35 * (100vw - 1024px) / 416);
+  }
 }
 html body .section1 header .headerWrapper ul li a {
   color: var(--myCream);
   position: relative;
 }
-html body .section1 header .headerWrapper ul li a::before {
-  content: "";
-  position: absolute;
-  left: -21px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 1px;
-  background-color: var(--myCream);
-}
 html body .section1 header .headerWrapper ul li::before {
   content: "";
   position: absolute;
-  left: -4px;
+  left: -10px;
   top: 50%;
   transform: translateY(-50%);
   width: 7px;
@@ -109,8 +137,16 @@ html body .section1 header .headerWrapper ul li::before {
   background-color: var(--myRed);
   border-radius: 50%;
 }
+html body .section1 header .headerWrapper ul li:last-child img {
+  max-width: 105px;
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html body .section1 header .headerWrapper ul li:last-child img {
+    max-width: calc(5px + 100 * (100vw - 1024px) / 416);
+  }
+}
 html body .section1 header .headerWrapper ul li:not(:last-child) {
-  margin-right: 48px;
+  margin-right: 4px;
 }
 html body .section1 header .headerWrapper .headerBtn {
   color: var(--myCream);
