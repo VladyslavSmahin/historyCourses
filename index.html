@@ -16,8 +16,20 @@
           rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
 <section class="section1" id="section1">
+    <div class="burgerMenu" id="burgerMenu">
+        <nav>
+            <ul>
+                <li><a href="#" id="to_about">О курсе</a></li>
+                <li><a href="#" id="to_for">Для кого</a></li>
+                <li><a href="#" id="to_aboutAuthor">Об авторе</a></li>
+                <li><a href="#" id="to_price">Стоимость</a></li>
+                <li><a href="#" id="to_FAQ">FAQ</a></li>
+                <li><a href="#" id="to_contacts">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <div class="headerWrapper sectionWrapper">
             <div class="logo">
@@ -27,17 +39,18 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">О курсе</a><img src="images/Line1.png" alt="img"> </li>
-                    <li><a href="#">Для кого</a><img src="images/Line1.png" alt="img"> </li>
-                    <li><a href="#">Об авторе</a><img src="images/Line1.png" alt="img"> </li>
-                    <li><a href="#">Стоимость</a><img src="images/Line1.png" alt="img"> </li>
-                    <li><a href="#">FAQ</a><img src="images/Line1.png" alt="img"> </li>
-                    <li><a href="#">Контакты</a><img src="images/Line1.png" alt="img"> </li>
+                    <li><a href="#section3">О курсе</a><img src="images/Line1.png" alt="img"></li>
+                    <li><a href="#section4">Для кого</a><img src="images/Line1.png" alt="img"></li>
+                    <li><a href="#section5">Об авторе</a><img src="images/Line1.png" alt="img"></li>
+                    <li><a href="#price">Стоимость</a><img src="images/Line1.png" alt="img"></li>
+                    <li><a href="#section6">FAQ</a><img src="images/Line1.png" alt="img"></li>
+                    <li><a href="#footer">Контакты</a><img src="images/Line1.png" alt="img"></li>
                 </ul>
             </nav>
             <button class="headerBtn">
                 КУПИТЬ
             </button>
+            <img src="images/burgerOpen.png" alt="img" class="burgerOpenBtn" id="burgerOpenBtn">
         </div>
     </header>
     <div class="section1Content">
@@ -54,15 +67,11 @@
             территориях современной Украины, формированию психотипа современных украинцев.</p>
         <div class="section2Roll">
             <img class="section2RollImg" id="section2RollImg" src="images/roll1.png" alt="img">
-            <p class="section2RollText">Автор отходит от традиционных форм периодизации истории, выходит за рамки
-                привычного пантеона героев и привычной трактовки прошлого. Некоторые предлагаемые автором гипотезы и
-                концепции могут выглядеть довольно спорными – но в спорах рождается истина. Каждая лекция будет длиться
-                академический час и сопровождаться получасовой дискуссией с автором курса. Всего предвидится 25 лекций
-                (вступительная плюс 24 лекции непосредственно по теме курса).</p>
+            <p class="section2RollText">Автор отходит от традиционных форм периодизации истории, выходит за рамки привычного пантеона героев и привычной трактовки прошлого. Некоторые предлагаемые автором гипотезы и концепции могут выглядеть довольно спорными – но в спорах рождается истина. Каждая лекция будет длиться академический час и включает в себя получасовую дискуссию с автором курса. Всего предвидится 25 лекций (вступительная плюс 24 лекции непосредственно по теме курса).</p>
         </div>
     </div>
 </section>
-<section class="section3">
+<section class="section3" id="section3">
     <div class="section3Wrapper sectionWrapper">
         <img class="section3BgImg" src="images/black_line.png" alt="bgImg">
         <div class="section3Lecture section3Lecture1">
@@ -222,11 +231,11 @@
         <div class="section3Summary">
             <img class="frame" src="images/frame.png" alt="img">
             <div class="section3SummaryTextWrapper">
-                <img src="images/braceL.png" alt="img">
+                <img class="braceL" src="images/braceL.png" alt="img">
                 <p class="section3SummaryText">Лекции будут проводиться дважды в неделю на протяжении трех месяцев.
                     Будет существовать возможность ознакомления с лекционным курсом в записи. Слушатели получат
                     возможность пользоваться дополнительной литературой и другими материалами.</p>
-                <img src="images/braceR.png" alt="img">
+                <img class="braceR" src="images/braceR.png" alt="img">
             </div>
             <button class="headerBtn">
                 КУПИТЬ
@@ -234,7 +243,7 @@
         </div>
     </div>
 </section>
-<section class="section4">
+<section class="section4" id="section4">
     <div class="section4Wrapper sectionWrapper">
         <div class="section4CartWrapper1 section4CartWrapper">
             <div class="section4Cart1 section4Cart">
@@ -313,14 +322,15 @@
         </div>
     </div>
 </section>
-<section class="section5">
+<section class="section5" id="section5">
     <div class="section5Wrapper sectionWrapper">
         <div class="section5LeftContentWrapper">
             <div class="section5LeftContentWrapperText">
                 <h4 class="section5LeftContentWrapperTextTitle"><span>//</span> Об авторе</h4>
                 <h4 class="section5LeftContentWrapperTextName">Константин Петрович Бондаренко</h4>
                 <p class="section5LeftContentWrapperTextDate">(род. 2 мая 1969 г).</p>
-                <p class="section5LeftContentWrapperTextDescription">Украинский историк, политолог и писатель. Кандидат исторических наук. Профессиональный политический
+                <p class="section5LeftContentWrapperTextDescription">Украинский историк, политолог и писатель. Кандидат
+                    исторических наук. Профессиональный политический
                     консультант. Руководитель Фонда «Украинская политика». Автор более 10 монографий и более 3000
                     статей, интервью и других печатных материалов, а также художественных произведений и сборника
                     стихов, увидевших свет в Украине и за рубежом.</p>
@@ -349,7 +359,7 @@
                 </div>
             </div>
             <div class="priceContentWrapper">
-                <h4 class="priceWrapperTitle"><span>//</span> Стоимость</h4>
+                <h4 class="priceWrapperTitle" id="price"><span>//</span> Стоимость</h4>
                 <div class="priceWrapper">
                     <p>Полный курс</p>
                     <span class="line"></span>
@@ -364,7 +374,7 @@
         </div>
     </div>
 </section>
-<section class="section6">
+<section class="section6" id="section6">
     <div class="section6Wrapper sectionWrapper">
         <div class="section6TitleWrapper">
             <h4><span>//</span> FAQ</h4>
@@ -373,56 +383,53 @@
             <div class="section6MainContentWrapperLeft">
                 <div class="section6MainContentWrapperLeftCart">
                     <img src="images/braceL.png" alt="img">
-                    <h4>At vero eos et accusamus et iusto odio dignissimos?</h4>
+                    <h4>Как БУДЕТ проходить обучение и сколько времени длится курс?</h4>
                     <img src="images/braceR.png" alt="img">
                 </div>
                 <div class="section6MainContentWrapperLeftCartDescription1">
-                    <p>Ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                        molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-                        deserunt mollitia animi, id est laborum et dolorum fuga. </p>
+                    <p>Курс включает 25 лекций, которые будут проходить дважды в неделю на протяжении трех месяцев.
+                        Каждая лекция длится академический час и включает получасовую дискуссию с автором курса, где
+                        участники могут задать вопросы и обсудить материал. </p>
                 </div>
                 <div class="section6MainContentWrapperLeftCart">
                     <img src="images/braceL.png" alt="img">
-                    <h4>Nam libero tempore, cum soluta nobis est?</h4>
+                    <h4>Будет ли доступ к записям лекций?</h4>
                     <img src="images/braceR.png" alt="img">
                 </div>
                 <div class="section6MainContentWrapperLeftCartDescription2">
-                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum corrupti quos dolores et quas
-                        molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
-                        deserunt mollitia animi, similique sunt in culpa qui officia. </p>
+                    <p>Да, у участников будет возможность ознакомиться с записями всех лекций, а также получить доступ к
+                        дополнительной литературе и материалам. </p>
                 </div>
             </div>
             <div class="section6MainContentWrapperRight">
                 <div class="section6MainContentWrapperRightCart">
                     <img src="images/braceL.png" alt="img">
-                    <h4>Temporibus autem quibusdam et aut officiis debitis aut?</h4>
+                    <h4>Предусмотрены ли сертификаты по окончании курса?</h4>
                     <img src="images/braceR.png" alt="img">
                 </div>
                 <div class="section6MainContentWrapperRightCartDescription1">
-                    <p>Nam libero tempore, cum soluta nobis est eligendi corrupti quos dolores et quas molestias
-                        excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia emporibus
-                        autem quibusdam et aut officiis debitis aut rerum necess. </p>
+                    <p>Нет, поскольку курс состоит исключительно из лекционных занятий и не включает практическую
+                        составляющую, сертификаты не выдаются.</p>
                 </div>
                 <div class="section6MainContentWrapperRightCart">
                     <img src="images/braceL.png" alt="img">
-                    <h4>Itaque earum rerum hic tenetur a sapiente delectus?</h4>
+                    <h4>Нужны ли специальные знания для участия в курсе?</h4>
                     <img src="images/braceR.png" alt="img">
                 </div>
                 <div class="section6MainContentWrapperRightCartDescription2">
-                    <p>Et harum quidem rerum facilis est et expedita corrupti quos dolores et quas molestias excepturi
-                        sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia
-                        reiciendis voluptatibus maiores alias. </p>
+                    <p>Нет, курс рассчитан на широкий круг слушателей. Все темы будут объясняться доступным языком, хотя
+                        базовые знания по истории Восточной Европы могут быть полезны. </p>
                 </div>
             </div>
         </div>
         <img class="section6ImgMap" src="images/Vector2.png" alt="img">
     </div>
 </section>
-<footer>
+<footer id="footer">
     <div class="footerWrapper sectionWrapper">
         <div class="footerWrapperLeftContentWrapper">
             <div class="footerWrapperLeftContentWrapperPost">
-                <h4>ПОЧТА</h4>
+                <h4>ПОЧТА:</h4>
                 <a href="mailto:historylectures@gmail.com" target="_blank">
                     historylectures@gmail.com
                 </a>
@@ -441,18 +448,102 @@
     </div>
 </footer>
 <script>
-    function updateImageSource() {
-        const image = document.getElementById('section2RollImg');
+    document.addEventListener("DOMContentLoaded", () => {
+        function updateImageSource() {
+            const image = document.getElementById('section2RollImg');
 
-        if (window.innerWidth <= 1024) {
-            image.src = 'images/Group3541.png';
-        } else {
-            image.src = 'images/roll1.png';
+            if (window.innerWidth <= 1024) {
+                image.src = 'images/Group3541.png';
+            } else {
+                image.src = 'images/roll1.png';
+            }
         }
-    }
-    updateImageSource();
-    window.addEventListener('resize', updateImageSource);
 
+        updateImageSource();
+        window.addEventListener('resize', updateImageSource);
+
+
+        let burgerOpenBtn = document.getElementById('burgerOpenBtn');
+        let burgerMenu = document.getElementById('burgerMenu');
+        let body = document.getElementById('body');
+        const section1 = document.getElementById('section1');
+
+        function burgerMenuFunc() {
+            burgerOpenBtn.addEventListener('click', () => {
+                if (burgerOpenBtn.src.includes('burgerClose.png')) {
+                    burgerMenu.style.top = '-100%'; // Скрыть меню
+                    burgerMenu.style.opacity = '0'; // Сделать меню невидимым
+                    burgerOpenBtn.src = 'images/burgerOpen.png';
+                    body.style.overflow = 'inherit';
+                    section1.classList.remove('z-index-100');
+                } else {
+                    section1.classList.add('z-index-100');
+                    body.style.overflow = 'hidden';
+                    burgerMenu.style.display = 'flex'; // Убедитесь, что меню отображается
+                    setTimeout(() => {
+                        burgerMenu.style.top = '0'; // Плавно перемещаем меню вниз
+                        burgerMenu.style.opacity = '1'; // Делаем меню видимым
+                    }, 50); // Небольшая задержка для того, чтобы анимация сработала
+                    burgerOpenBtn.src = 'images/burgerClose.png';
+                }
+            });
+        }
+
+        burgerMenuFunc();
+
+        function clickMenuBurgerList(){
+            document.getElementById('burgerMenu').addEventListener('click', (event) => {
+                if (event.target.tagName === 'A') {
+                    event.preventDefault();
+
+                    const targetId = event.target.id;
+
+                    let sectionId;
+                    switch (targetId) {
+                        case 'to_about':
+                            sectionId = 'section3';
+                            break;
+                        case 'to_for':
+                            sectionId = 'section4';
+                            break;
+                        case 'to_aboutAuthor':
+                            sectionId = 'section5';
+                            break;
+                        case 'to_price':
+                            sectionId = 'price';
+                            break;
+                        case 'to_FAQ':
+                            sectionId = 'section6';
+                            break;
+                        case 'to_contacts':
+                            sectionId = 'footer';
+                            break;
+                        default:
+                            console.warn('Неизвестный элемент меню:', targetId);
+                            return;
+                    }
+
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.scrollIntoView({behavior: 'smooth'});
+                    }
+                    if (burgerMenu) {
+                        burgerOpenBtn.src = 'images/burgerOpen.png';
+                        body.style.overflow = 'inherit';
+                        section1.classList.remove('z-index-100');
+                        burgerMenu.style.top = '-100%';
+                        burgerMenu.style.opacity = '0';
+                        burgerOpenBtn.src = 'images/burgerOpen.png';
+                        document.body.style.overflow = 'inherit';
+                    } else {
+                        console.warn(`Секция с ID "${sectionId}" не найдена.`);
+                    }
+                }
+            });
+        }
+        clickMenuBurgerList();
+
+    });
 </script>
 </body>
 </html>

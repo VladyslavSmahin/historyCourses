@@ -30,6 +30,9 @@ a {
 }
 
 html {
+
+  scroll-behavior: smooth;
+
   .sectionWrapper {
     width: 100%;
     max-width: 1240px;
@@ -47,9 +50,72 @@ html {
       background-position: center;
       position: relative;
 
+      .burgerMenu {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom, var(--myBlack), var(--myBlack), var(--myRed));
+        position: fixed;
+        z-index: 100;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: top 0.3s ease, opacity 0.3s ease;
+
+        nav {
+          background-image: url("images/Group3541.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 100%;
+          max-width: 320px;
+          height: 462px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0 126px 60px;
+            max-width: 220px;
+            width: 100%;
+            text-align: center;
+
+            li {
+              text-decoration: none;
+              padding: 20px 0 ;
+              a{
+                color: var(--myBlack);
+
+              }
+            }
+            li:not(:last-child) {
+              border-bottom: 1px solid var(--myRed);
+              width: 220px;
+            }
+          }
+        }
+      }
+
+
       header {
         padding-top: 18px;
         z-index: 1;
+
+        .burgerOpenBtn {
+          display: block;
+          position: relative;
+          z-index: 101;
+          width: 26px;
+          height: 26px;
+
+          @media (min-width: 1025px) and (max-width: 1440px) {
+            display: none;
+          }
+        }
 
         .headerWrapper {
           display: flex;
@@ -69,6 +135,10 @@ html {
             }
             @media (min-width: 1024px) and (max-width: 1440px) {
               max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
+
+            }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              max-width: calc(126px + (170 - 126) * ((100vw - 360px) / (1024 - 360)));
 
             }
 
@@ -95,13 +165,16 @@ html {
             }
           }
 
+          nav {
+            @media (min-width: 360px) and (max-width: 1024px) {
+              display: none;
+            }
+          }
+
           ul {
             display: flex;
             justify-content: space-between;
 
-            @media (min-width: 360px) and (max-width: 1024px) {
-              display: none;
-            }
 
             li {
               position: relative;
@@ -116,7 +189,7 @@ html {
                 position: relative;
                 top: 1px;
                 @media (min-width: 1024px) and (max-width: 1440px) {
-                  max-width: calc(5px + (40 - 5) * ((100vw - 1024px) / (1440 - 1024)));
+                  max-width: calc(5px + (38 - 5) * ((100vw - 1024px) / (1440 - 1024)));
                 }
               }
 
@@ -161,6 +234,9 @@ html {
             @media (min-width: 360px) and (max-width: 1440px) {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
+            @media (min-width: 360px) and (max-width: 1024px) {
+              padding: calc(8px + (12 - 8) * ((100vw - 360px) / (1024 - 360))) 20px calc(8px + (12 - 8) * ((100vw - 360px) / (1024 - 360))) 20px;;
+            }
           }
         }
       }
@@ -176,6 +252,10 @@ html {
 
         @media (min-width: 360px) and (max-width: 1440px) {
           max-width: calc(310px + (818 - 310) * ((100vw - 360px) / (1440 - 360)));
+        }
+        @media (min-width: 360px) and (max-width: 768px) {
+          padding-top: calc(39px + (213 - 39) * ((100vw - 360px) / (768 - 360)));
+          padding-bottom: calc(60px + (250 - 60) * ((100vw - 360px) / (768 - 360)));
         }
 
         h1 {
@@ -228,10 +308,20 @@ html {
     }
 
     .section1::before {
-      top: 0; /* Первая картинка вверху */
-      height: 367px;
+      top: 0;
+      height: 100%;
+      max-height: 367px;
       background-image: url("images/Group3524.png");
       z-index: 0;
+
+      @media (min-width: 360px) and (max-width: 768px) {
+        background-image: url("images/Group3524.1.png");
+        max-height: calc(95px + (195 - 95) * ((100vw - 360px) / (768 - 360)));
+      }
+    }
+
+    .z-index-100::before {
+      z-index: 101;
     }
 
     .section1::after {
@@ -240,6 +330,11 @@ html {
       background-image: url("images/Group3523.png");
       background-repeat: no-repeat;
       z-index: 0;
+
+      @media (min-width: 360px) and (max-width: 768px) {
+        background-image: url("images/Group3523.1.png");
+        max-height: calc(147px + (316 - 147) * ((100vw - 360px) / (768 - 360)));
+      }
     }
 
     .section2 {
@@ -268,11 +363,14 @@ html {
 
           @media (min-width: 1024px) and (max-width: 1440px) {
             max-width: calc(400px + (605 - 400) * ((100vw - 1024px) / (1440 - 1024)));
+            font-size: calc(18px + (22 - 18) * ((100vw - 1024px) / (1440 - 1024)));
 
           }
           @media (min-width: 360px) and (max-width: 1024px) {
             max-width: calc(320px + (600 - 320) * ((100vw - 360px) / (1024 - 360)));
             margin-bottom: 40px;
+            line-height: 24px;
+            font-size: calc(16px + (18 - 16) * ((100vw - 1024px) / (1440 - 1024)));
           }
         }
 
@@ -294,6 +392,9 @@ html {
               height: 500px;
               width: 350px;
             }
+            @media (min-width: 360px) and (max-width: 768px) {
+              height: 422px;
+            }
           }
 
           .section2RollText {
@@ -314,6 +415,7 @@ html {
             @media (min-width: 360px) and (max-width: 1024px) {
               max-width: calc(264px + (300 - 264) * ((100vw - 360px) / (1024 - 360)));
               margin-bottom: 40px;
+              font-size: 14px;
               top: 45%;
             }
           }
@@ -329,6 +431,9 @@ html {
 
         @media (min-width: 360px) and (max-width: 1024px) {
           padding-bottom: 100px;
+        }
+        @media (min-width: 360px) and (max-width: 768px) {
+          padding-bottom: 0;
         }
 
         .section3BgImg {
@@ -386,12 +491,27 @@ html {
               color: var(--myRed);
               font-weight: 800;
 
+              @media (min-width: 360px) and (max-width: 768px) {
+                //max-width: calc(320px + (817 - 320) * ((100vw - 360px) / (1440 - 360)));
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 48px;
+              }
+
+
               .lectureNumText {
                 font-size: 28px;
+                @media (min-width: 360px) and (max-width: 768px) {
+                  font-size: 32px;
+                  margin-right: 5px;
+                }
               }
 
               .lectureNum {
                 font-size: 64px;
+                @media (min-width: 360px) and (max-width: 768px) {
+                  font-size: 32px;
+                }
               }
             }
 
@@ -402,6 +522,9 @@ html {
                 margin-left: calc(19px + (30 - 10) * ((100vw - 1024px) / (1440 - 1024)));
 
               }
+              @media (min-width: 360px) and (max-width: 768px) {
+                margin-left: 0;
+              }
 
               .lectureTitle {
                 font-size: 32px;
@@ -409,6 +532,11 @@ html {
                 text-transform: uppercase;
                 font-weight: 500;
                 margin-bottom: 20px;
+
+                @media (min-width: 360px) and (max-width: 768px) {
+                  font-size: calc(28px + (32 - 28) * ((100vw - 360px) / (768 - 360)));
+                  margin-bottom: calc(16px + (20 - 16) * ((100vw - 360px) / (768 - 360)));
+                }
               }
 
               .lectureText {
@@ -417,6 +545,10 @@ html {
                 color: var(--myCream);
                 @media (min-width: 360px) and (max-width: 1024px) {
                   margin-bottom: 50px;
+                }
+                @media (min-width: 360px) and (max-width: 768px) {
+                  font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360)));
+                  margin-bottom: calc(12px + (50 - 12) * ((100vw - 360px) / (768 - 360)));
                 }
               }
 
@@ -434,48 +566,75 @@ html {
           content: "";
           position: absolute;
           top: 0;
-
           width: 100vw;
           height: 230px;
-          background-color: var(--myBlack); /* Использовать переменную для цвета фона */
+          background-color: var(--myBlack);
           z-index: 0;
           overflow: hidden;
 
-          @media (min-width: 1025px) and (max-width: 1440px) {
+          @media (min-width: 1025px) and (max-width: 1900px) {
             display: none;
+          }
+          @media (min-width: 360px) and (max-width: 768px) {
+            height: 140px;
           }
         }
 
         .section3Lecture1::before {
           top: 390px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
+
         }
 
         .section3Lecture2::before {
           top: 288px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture3::before {
           top: 289px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture4::before {
           top: 290px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture5::before {
           top: 290px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture6::before {
           top: 290px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture7::before {
           top: 289px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(140px + (260 - 140) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture8::before {
           top: 270px;
+          @media (min-width: 360px) and (max-width: 768px) {
+            top: calc(210px + (330 - 210) * ((100vw - 360px) / (768 - 360)));
+          }
         }
 
         .section3Lecture1 {
@@ -497,7 +656,10 @@ html {
             flex-direction: column;
             align-items: center;
           }
+          @media (min-width: 360px) and (max-width: 768px) {
+            padding-top: 0;
 
+          }
         }
 
         .section3Lecture8 {
@@ -605,7 +767,7 @@ html {
 
         .section3Summary {
           position: relative;
-          z-index: 1;
+          z-index: 2;
 
           .frame {
 
@@ -620,10 +782,26 @@ html {
 
           .section3SummaryTextWrapper {
             display: flex;
+            align-items: center;
             position: absolute;
             top: 48px;
             left: 107px;
             color: var(--myCream);
+
+            .braceL {
+              height: fit-content;
+              @media (min-width: 360px) and (max-width: 768px) {
+                align-self: start;
+              }
+            }
+
+            .braceR {
+              height: fit-content;
+              @media (min-width: 360px) and (max-width: 768px) {
+                align-self: end;
+              }
+
+            }
 
             @media (min-width: 360px) and (max-width: 1024px) {
               position: relative;
@@ -634,9 +812,12 @@ html {
             .section3SummaryText {
               max-width: 842px;
               margin: 0 12px;
-              //letter-spacing: -0.03em;
               font-size: 16px;
-              line-height: 24px;;
+              line-height: 24px;
+
+              @media (min-width: 360px) and (max-width: 768px) {
+                font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360)));
+              }
             }
           }
 
@@ -646,7 +827,7 @@ html {
             border: 3px var(--myCream) solid;
             padding: 12px 20px;
             font-size: 16px;
-            z-index: 1;
+            z-index: 2;
             position: absolute;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -662,6 +843,12 @@ html {
               top: 81px;
               left: 50%;
             }
+            @media (min-width: 360px) and (max-width: 768px) {
+              width: 100%;
+              top: 50px;
+              max-width: none;
+            }
+
           }
         }
 
@@ -677,10 +864,24 @@ html {
       position: relative;
       z-index: 1;
 
+      @media (min-width: 360px) and (max-width: 768px) {
+        background-image: none;
+      }
+
       .section4Wrapper {
         display: flex;
+        position: relative;
+        z-index: 1;
         flex-direction: column;
         padding: 230px 0 330px;
+
+        @media (min-width: 360px) and (max-width: 1024px) {
+          padding: 230px 0 128px;
+        }
+        @media (min-width: 360px) and (max-width: 768px) {
+          padding: 150px 0 0px;
+        }
+
 
         .section4CartWrapper {
           display: flex;
@@ -689,20 +890,33 @@ html {
           margin-bottom: 40px;
 
           @media (min-width: 360px) and (max-width: 1024px) {
-            //line-height: calc(18px + (32 - 18) * ((100vw - 360px) / (1024 - 360))) ;
             align-items: center;
             flex-direction: column;
 
           }
 
           .section4Cart {
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              margin-bottom: 40px;
+            }
+
             .section4CartContentWrapper {
-              max-width: 222px !important;
+              //max-width: 222px !important;
+              @media (min-width: 360px) and (max-width: 1024px) {
+                max-width: calc(268px + (310 - 222) * ((100vw - 360px) / (1024 - 360))) !important;
+                width: 100%;
+
+              }
 
               .section4CartTitle {
                 color: #FFFFFF;
                 @media (min-width: 1024px) and (max-width: 1440px) {
                   font-size: calc(22px + (32 - 22) * ((100vw - 1024px) / (1440 - 1024))) !important;
+
+                }
+                @media (min-width: 360px) and (max-width: 1024px) {
+                  font-size: 24px !important;
 
                 }
               }
@@ -737,6 +951,11 @@ html {
                 position: absolute;
                 top: -46px;
                 right: -40px;
+
+                @media (min-width: 360px) and (max-width: 1024px) {
+                  right: calc(-18px + (0 + 18) * ((100vw - 360px) / (1024 - 360))) !important;
+
+                }
               }
 
               .section4Cart1Title {
@@ -769,6 +988,11 @@ html {
                 position: absolute;
                 top: -46px;
                 right: -15px;
+
+                @media (min-width: 360px) and (max-width: 1024px) {
+                  right: calc(-18px + (33 + 18) * ((100vw - 360px) / (1024 - 360))) !important;
+
+                }
               }
 
               .section4Cart2Title {
@@ -786,7 +1010,7 @@ html {
         .section4CartWrapper1 {
 
           @media (min-width: 360px) and (max-width: 1024px) {
-          order: 2;
+            order: 2;
 
           }
         }
@@ -797,17 +1021,30 @@ html {
           align-self: center;
           @media (min-width: 360px) and (max-width: 1024px) {
             order: 1;
-
+            margin-bottom: 40px;
           }
 
           h4, {
             font-size: 64px;
             color: var(--myCream);
+            text-transform: uppercase;
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              font-size: calc(32px + (54 - 32) * ((100vw - 360px) / (1024 - 360))) !important;
+
+
+            }
           }
 
           span {
             font-size: 64px;
             color: var(--myRed);
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              font-size: calc(32px + (54 - 32) * ((100vw - 360px) / (1024 - 360))) !important;
+
+
+            }
           }
         }
 
@@ -862,7 +1099,7 @@ html {
             height: 375px;
 
             @media (min-width: 360px) and (max-width: 1024px) {
-
+              top: 0px;
             }
 
             .section4Cart4ContentWrapper {
@@ -912,6 +1149,11 @@ html {
                 position: absolute;
                 top: -46px;
                 right: -13px;
+
+                @media (min-width: 360px) and (max-width: 1024px) {
+                  top: -76px;
+                  right: 27px;
+                }
               }
 
               .section4Cart5Title {
@@ -936,19 +1178,32 @@ html {
       height: auto;
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: 2;
+      z-index: 0;
     }
 
     .section4::before {
       top: 0;
       background-image: url("images/Group3530.png");
       height: 150px;
+      z-index: 0;
+
+      @media (min-width: 360px) and (max-width: 768px) {
+        top: 50px;
+        background-image: url("images/Group3550.1.png");
+        height: calc(330px + (500 - 330) * ((100vw - 360px) / (768 - 360)));
+      }
     }
 
     .section4::after {
       bottom: 0;
       background-image: url("images/Group3544.png");
       height: 150px;
+
+      @media (min-width: 360px) and (max-width: 768px) {
+        background-image: url("images/Group3551.1.png");
+        width: 100%;
+        height: calc(330px + (700 - 330) * ((100vw - 360px) / (768 - 360)));
+      }
     }
 
     .section5 {
@@ -960,9 +1215,24 @@ html {
       z-index: 1;
       padding: 80px 0 312px;
 
+      @media (min-width: 360px) and (max-width: 1024px) {
+        overflow: hidden;
+      }
+      @media (min-width: 360px) and (max-width: 768px) {
+        padding: 0px 0 150px;
+      }
+
+
       .section5Wrapper {
         display: flex;
         justify-content: space-between;
+
+
+        @media (min-width: 360px) and (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
 
         .section5LeftContentWrapper {
           display: flex;
@@ -975,6 +1245,12 @@ html {
             font-size: 64px;
             color: var(--myCream);
             margin-bottom: 20px;
+            text-transform: uppercase;
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(32px + (64 - 32) * ((100vw - 360px) / (768 - 360))) !important;
+              margin-top: 50px;
+            }
 
             span {
               color: var(--myBlack);
@@ -984,18 +1260,30 @@ html {
           .section5LeftContentWrapperTextName {
             font-size: 32px;
             color: var(--myCream);
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(24px + (32 - 24) * ((100vw - 360px) / (768 - 360))) !important;
+            }
           }
 
           .section5LeftContentWrapperTextDate {
             font-size: 16px;
             color: var(--myCream);
             margin-bottom: 20px;
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360))) !important;
+            }
           }
 
           .section5LeftContentWrapperTextDescription {
             font-size: 22px;
             line-height: 32px;
             color: var(--myCream);
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (768 - 360))) !important;
+            }
           }
 
           .section5LeftContentImg {
@@ -1009,12 +1297,23 @@ html {
           display: flex;
           flex-direction: column;
           max-width: 499px;
+          z-index: 1;
 
           .section5RightContentPhotoWrapper {
             position: relative;
 
+            @media (min-width: 360px) and (max-width: 768px) {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+
             .section5RightContentPhoto {
               margin-bottom: 14px;
+
+              @media (min-width: 360px) and (max-width: 768px) {
+                max-width: calc(320px + (500 - 320) * ((100vw - 360px) / (768 - 360))) !important;
+              }
             }
 
             .section5RightContentPhotoDescr1Wrapper {
@@ -1028,6 +1327,14 @@ html {
               left: -100px;
               z-index: 0;
 
+              @media (min-width: 360px) and (max-width: 768px) {
+                position: relative;
+                top: 0px;
+                left: -0px;
+                max-width: calc(320px + (450 - 320) * ((100vw - 360px) / (768 - 360))) !important;
+                line-height: 22px;
+              }
+
               .section5RightContentPhotoDescr1 {
                 position: absolute;
                 width: 100%;
@@ -1035,6 +1342,11 @@ html {
                 left: 55%;
                 top: 54%;
                 transform: translate(-50%, -50%) rotate(5deg);
+
+                @media (min-width: 360px) and (max-width: 768px) {
+
+                  left: calc(65% + (55 - 65) * ((100vw - 360px) / (768 - 360))) !important;
+                }
 
                 .quote {
                   margin-top: 5px;
@@ -1052,6 +1364,10 @@ html {
               position: relative;
               z-index: 2;
               margin-bottom: 124px;
+              @media (min-width: 360px) and (max-width: 768px) {
+                margin-bottom: 60px;
+                max-width: calc(320px + (450 - 320) * ((100vw - 360px) / (768 - 360))) !important;
+              }
 
               .section5RightContentPhotoDescr2 {
                 position: absolute;
@@ -1060,6 +1376,11 @@ html {
                 left: 53%;
                 top: 54%;
                 transform: translate(-50%, -50%) rotate(-2deg);
+
+                @media (min-width: 360px) and (max-width: 768px) {
+
+                  left: calc(60% + (53 - 60) * ((100vw - 360px) / (768 - 360))) !important;
+                }
 
                 .quote {
                   margin-top: 5px;
@@ -1070,9 +1391,22 @@ html {
           }
 
           .priceContentWrapper {
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              max-width: calc(320px + (1280 - 320) * ((100vw - 360px) / (1440 - 360)));
+              width: 100%;
+            }
+
             .priceWrapperTitle {
               font-size: 64px;
               color: var(--myCream);
+
+              @media (min-width: 360px) and (max-width: 1440px) {
+                font-size: calc(32px + (64 - 32) * ((100vw - 360px) / (1440 - 360)));
+              }
 
               span {
                 color: var(--myRed);
@@ -1081,16 +1415,31 @@ html {
 
             .priceWrapper {
               display: flex;
+              justify-content: space-between;
               align-items: center;
               position: relative;
               font-size: 22px;
               color: var(--myCream);
 
+              @media (min-width: 360px) and (max-width: 1440px) {
+                font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (1440 - 360)));
+              }
+
               .line {
-                width: 97px;
+                width: 147px;
                 height: 1px;
                 background-color: var(--myCream);
                 margin: 0 4px 0 12px;
+
+                @media (min-width: 360px) and (max-width: 768px) {
+                  position: absolute;
+                  left: calc(111px + (170 - 111) * ((100vw - 360px) / (768 - 360)));
+                  width: calc(90px + (147 - 90) * ((100vw - 360px) / (768 - 360)));
+
+                  margin: 0;
+                  //font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (1440 - 360)));
+                }
+
               }
 
               .circle {
@@ -1098,6 +1447,14 @@ html {
                 height: 7px;
                 background-color: var(--myRed);
                 border-radius: 50%;
+
+                @media (min-width: 360px) and (max-width: 768px) {
+                  position: absolute;
+                  left: calc(208px + (323 - 208) * ((100vw - 360px) / (768 - 360)));
+                  //font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (1440 - 360)));
+                }
+
+
               }
 
               .priceBg {
@@ -1106,7 +1463,12 @@ html {
 
               .price {
                 position: absolute;
-                right: 103px;
+                right: 52px;
+
+                @media (min-width: 360px) and (max-width: 768px) {
+                  right: calc(56px + (61 - 56) * ((100vw - 360px) / (768 - 360))) !important;
+                }
+
               }
             }
 
@@ -1148,15 +1510,29 @@ html {
       z-index: 1;
       padding: 80px 0;
 
+      @media (min-width: 360px) and (max-width: 1024px) {
+
+        padding: 50px 0;
+      }
+
       .section6Wrapper {
         display: flex;
         flex-direction: column;
 
         .section6TitleWrapper {
+          position: relative;
+          z-index: 1;
+
+
           h4 {
             font-size: 64px;
             color: var(--myCream);
             margin-bottom: 60px;
+
+            @media (min-width: 360px) and (max-width: 1024px) {
+
+              margin-bottom: 40px;
+            }
 
             span {
               color: var(--myBlack);
@@ -1168,6 +1544,23 @@ html {
           display: flex;
           justify-content: space-between;
 
+          p {
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360)));
+            }
+          }
+
+          h4 {
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(18px + (28 - 18) * ((100vw - 360px) / (768 - 360))) !important;
+            }
+          }
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+          }
+
           .section6MainContentWrapperLeft {
             max-width: 605px;
             display: flex;
@@ -1178,6 +1571,10 @@ html {
               display: flex;
               align-items: center;
               margin-bottom: 28px;
+
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-bottom: 21px;
+              }
 
               h4 {
                 font-size: 28px;
@@ -1191,10 +1588,19 @@ html {
               margin-bottom: 60px;
               letter-spacing: -0.03em;
               color: var(--myCream);
+
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-bottom: 32px;
+              }
+
             }
 
             .section6MainContentWrapperLeftCartDescription2 {
               color: var(--myCream);
+
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-bottom: 32px;
+              }
             }
           }
 
@@ -1209,6 +1615,10 @@ html {
               align-items: center;
               margin-bottom: 28px;
 
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-bottom: 21px;
+              }
+
               h4 {
                 font-size: 28px;
                 color: var(--myCream);
@@ -1218,9 +1628,14 @@ html {
             }
 
             .section6MainContentWrapperRightCartDescription1 {
-              margin-bottom: 60px;
+              margin-bottom: 107px;
               letter-spacing: -0.03em;
               color: var(--myCream);
+
+              @media (min-width: 360px) and (max-width: 1024px) {
+                margin-bottom: 32px;
+              }
+
             }
 
             .section6MainContentWrapperRightCartDescription2 {
@@ -1248,12 +1663,32 @@ html {
         align-items: center;
         justify-content: space-between;
 
+        @media (min-width: 360px) and (max-width: 1024px) {
+          flex-direction: column;
+        }
+
+
         .footerWrapperLeftContentWrapper {
           display: flex;
           align-items: center;
 
+          @media (min-width: 360px) and (max-width: 1024px) {
+            max-width: 605px;
+            justify-content: space-between;
+            width: 100%;
+          }
+          @media (min-width: 360px) and (max-width: 768px) {
+            flex-direction: column;
+            align-items: start;
+          }
+
           h4, a {
             color: var(--myCream);
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(14px + (24 - 14) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
 
           .footerWrapperLeftContentWrapperPost {
@@ -1263,6 +1698,8 @@ html {
 
             h4 {
               margin-right: 12px;
+
+
             }
           }
 
@@ -1277,8 +1714,24 @@ html {
         }
 
         .footerWrapperRightContentWrapper {
+
+          @media (min-width: 360px) and (max-width: 1024px) {
+            max-width: 605px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
+          @media (min-width: 360px) and (max-width: 768px) {
+
+          }
+
           a {
             color: var(--myRed);
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              font-size: calc(12px + (24 - 12) * ((100vw - 360px) / (768 - 360)));
+
+            }
           }
 
           .politic {
