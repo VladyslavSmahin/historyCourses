@@ -73,6 +73,7 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
+
           ul {
             display: flex;
             flex-direction: column;
@@ -86,12 +87,14 @@ html {
 
             li {
               text-decoration: none;
-              padding: 20px 0 ;
-              a{
+              padding: 20px 0;
+
+              a {
                 color: var(--myBlack);
 
               }
             }
+
             li:not(:last-child) {
               border-bottom: 1px solid var(--myRed);
               width: 220px;
@@ -104,6 +107,10 @@ html {
       header {
         padding-top: 18px;
         z-index: 1;
+
+        @media (min-width: 360px) and (max-width: 768px) {
+          padding-top: 10px;
+        }
 
         .burgerOpenBtn {
           display: block;
@@ -152,11 +159,14 @@ html {
               @media (min-width: 360px) and (max-width: 1024px) {
                 max-width: calc(100px + (170 - 100) * ((100vw - 360px) / (1024 - 360)));
               }
+              @media (min-width: 360px) and (max-width: 768px) {
+                display: none;
+              }
             }
 
             .logoP1 {
               color: var(--myCream);
-              font-weight: 700;
+              font-weight: 600;
             }
 
             .logoP2 {
@@ -227,10 +237,12 @@ html {
           .headerBtn {
             color: var(--myCream);
             background: none;
-            border: 3px var(--myRed) solid;
             padding: 12px 20px;
             font-size: 16px;
             z-index: 1;
+            border: 4px var(--myRed) solid;
+            font-weight: 700;
+
             @media (min-width: 360px) and (max-width: 1440px) {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
@@ -254,7 +266,7 @@ html {
           max-width: calc(310px + (818 - 310) * ((100vw - 360px) / (1440 - 360)));
         }
         @media (min-width: 360px) and (max-width: 768px) {
-          padding-top: calc(39px + (213 - 39) * ((100vw - 360px) / (768 - 360)));
+          padding-top: calc(60px + (213 - 60) * ((100vw - 360px) / (768 - 360)));
           padding-bottom: calc(60px + (250 - 60) * ((100vw - 360px) / (768 - 360)));
         }
 
@@ -263,6 +275,7 @@ html {
           font-size: 74px;
           color: var(--myRed);
           font-weight: 600;
+          text-transform: uppercase;
 
           @media (min-width: 360px) and (max-width: 1440px) {
             font-size: calc(28px + (74 - 28) * ((100vw - 360px) / (1440 - 360)));
@@ -281,13 +294,18 @@ html {
           @media (min-width: 360px) and (max-width: 1440px) {
             font-size: calc(14px + (28 - 14) * ((100vw - 360px) / (1440 - 360)));
           }
+          @media (min-width: 360px) and (max-width: 768px) {
+            margin-bottom: 24px;
+          }
         }
 
         .section1MoreLink {
+          font-weight: 600;
+          font-family: "Tektur", sans-serif;
           font-size: 24px;
           padding: 16px 62px;
           color: var(--myCream);
-          border: 3px var(--myRed) solid;
+          border: 3px var(--myCream) solid;
 
           @media (min-width: 360px) and (max-width: 1440px) {
             font-size: calc(20px + (24 - 20) * ((100vw - 360px) / (1440 - 360)));
@@ -548,7 +566,7 @@ html {
                 }
                 @media (min-width: 360px) and (max-width: 768px) {
                   font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360)));
-                  margin-bottom: calc(12px + (50 - 12) * ((100vw - 360px) / (768 - 360)));
+                  margin-bottom: calc(48px + (50 - 48) * ((100vw - 360px) / (768 - 360)));
                 }
               }
 
@@ -826,7 +844,6 @@ html {
             background: none;
             border: 3px var(--myCream) solid;
             padding: 12px 20px;
-            font-size: 16px;
             z-index: 2;
             position: absolute;
             left: 50%;
@@ -834,9 +851,12 @@ html {
             bottom: 0;
             max-width: 200px;
             width: 100%;
+            font-size: 20px;
+            font-family: 'Tektur', sans-serif;
+            font-weight: 500;
 
             @media (min-width: 360px) and (max-width: 1440px) {
-              font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+              font-size: calc(20px + (20 - 20) * ((100vw - 360px) / (1440 - 360)));
             }
             @media (min-width: 360px) and (max-width: 1024px) {
               position: relative;
@@ -936,8 +956,11 @@ html {
             background-image: url("images/Group3549.png");
             position: relative;
             width: 100%;
-            max-width: 393px;
-            height: 353px;
+            max-width: 320px;
+            height: 288px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             .section4Cart1ContentWrapper {
               position: absolute;
@@ -949,11 +972,11 @@ html {
               .section4Cart1Num {
                 font-size: 32px;
                 position: absolute;
-                top: -46px;
+                top: -37px;
                 right: -40px;
 
                 @media (min-width: 360px) and (max-width: 1024px) {
-                  right: calc(-18px + (0 + 18) * ((100vw - 360px) / (1024 - 360))) !important;
+                  right: calc(-10px + (0 + 10) * ((100vw - 360px) / (1024 - 360))) !important;
 
                 }
               }
@@ -973,8 +996,11 @@ html {
             background-image: url("images/Group3531.png");
             position: relative;
             width: 100%;
-            max-width: 393px;
-            height: 357px;
+            max-width: 320px;
+            height: 288px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             .section4Cart2ContentWrapper {
               position: absolute;
@@ -986,11 +1012,11 @@ html {
               .section4Cart2Num {
                 font-size: 32px;
                 position: absolute;
-                top: -46px;
+                top: -34px;
                 right: -15px;
 
                 @media (min-width: 360px) and (max-width: 1024px) {
-                  right: calc(-18px + (33 + 18) * ((100vw - 360px) / (1024 - 360))) !important;
+                  right: calc(10px + (33 - 10) * ((100vw - 360px) / (1024 - 360))) !important;
 
                 }
               }
@@ -1061,8 +1087,11 @@ html {
             background-image: url("images/Group3533.png");
             position: relative;
             width: 100%;
-            max-width: 393px;
-            height: 380px;
+            max-width: 320px;
+            height: 310px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             .section4Cart3ContentWrapper {
               position: absolute;
@@ -1132,8 +1161,11 @@ html {
             background-image: url("images/Group3535.png");
             position: relative;
             width: 100%;
-            max-width: 393px;
-            height: 407px;
+            max-width: 320px;
+            height: 330px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
 
             .section4Cart5ContentWrapper {
               position: absolute;
@@ -1151,7 +1183,7 @@ html {
                 right: -13px;
 
                 @media (min-width: 360px) and (max-width: 1024px) {
-                  top: -76px;
+                  top: -48px;
                   right: 27px;
                 }
               }
@@ -1280,6 +1312,7 @@ html {
             font-size: 22px;
             line-height: 32px;
             color: var(--myCream);
+            margin-bottom: 40px;
 
             @media (min-width: 360px) and (max-width: 768px) {
               font-size: calc(16px + (22 - 16) * ((100vw - 360px) / (768 - 360))) !important;
@@ -1329,7 +1362,7 @@ html {
 
               @media (min-width: 360px) and (max-width: 768px) {
                 position: relative;
-                top: 0px;
+                top: -64px;
                 left: -0px;
                 max-width: calc(320px + (450 - 320) * ((100vw - 360px) / (768 - 360))) !important;
                 line-height: 22px;
@@ -1365,8 +1398,9 @@ html {
               z-index: 2;
               margin-bottom: 124px;
               @media (min-width: 360px) and (max-width: 768px) {
-                margin-bottom: 60px;
+                margin-bottom: 0;
                 max-width: calc(320px + (450 - 320) * ((100vw - 360px) / (768 - 360))) !important;
+                top: -98px;
               }
 
               .section5RightContentPhotoDescr2 {
@@ -1403,9 +1437,14 @@ html {
             .priceWrapperTitle {
               font-size: 64px;
               color: var(--myCream);
+              text-transform: uppercase;
 
               @media (min-width: 360px) and (max-width: 1440px) {
                 font-size: calc(32px + (64 - 32) * ((100vw - 360px) / (1440 - 360)));
+              }
+              @media (min-width: 360px) and (max-width: 768px) {
+
+                margin-top: -10px;
               }
 
               span {
@@ -1464,9 +1503,12 @@ html {
               .price {
                 position: absolute;
                 right: 52px;
+                font-family: 'tektur', sans-serif;
+                font-size: 28px;
+                font-weight: 600;
 
                 @media (min-width: 360px) and (max-width: 768px) {
-                  right: calc(56px + (61 - 56) * ((100vw - 360px) / (768 - 360))) !important;
+                  right: calc(37px + (61 - 37) * ((100vw - 360px) / (768 - 360))) !important;
                 }
 
               }
@@ -1477,10 +1519,13 @@ html {
               background: none;
               border: 3px var(--myRed) solid;
               padding: 16px 55px;
-              font-size: 16px;
+              font-size: 20px;
               z-index: 1;
+              font-family: "Tektur", sans-serif;
+              font-weight: 500;
+
               @media (min-width: 360px) and (max-width: 1440px) {
-                font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
+                font-size: calc(20px + (20 - 20) * ((100vw - 360px) / (1440 - 360)));
               }
             }
           }
@@ -1530,7 +1575,7 @@ html {
             margin-bottom: 60px;
 
             @media (min-width: 360px) and (max-width: 1024px) {
-
+              font-size: calc(32px + (64 - 32) * ((100vw - 360px) / (1024 - 360)));
               margin-bottom: 40px;
             }
 
@@ -1577,10 +1622,11 @@ html {
               }
 
               h4 {
+                font-weight: 600;
+                text-transform: uppercase;
                 font-size: 28px;
                 color: var(--myCream);
                 padding: 0 16px;
-                font-weight: normal;
               }
             }
 
@@ -1620,10 +1666,11 @@ html {
               }
 
               h4 {
+                font-weight: 600;
+                text-transform: uppercase;
                 font-size: 28px;
                 color: var(--myCream);
                 padding: 0 16px;
-                font-weight: normal;
               }
             }
 
@@ -1650,6 +1697,11 @@ html {
           top: 31px;
           right: 0;
           z-index: 0;
+
+          @media (min-width: 360px) and (max-width: 1440px) {
+            max-width: calc(400px + (913 - 400) * ((100vw - 360px) / (1440 - 360)));
+          }
+
         }
       }
     }
@@ -1680,6 +1732,8 @@ html {
           @media (min-width: 360px) and (max-width: 768px) {
             flex-direction: column;
             align-items: start;
+            margin-bottom: 20px;
+
           }
 
           h4, a {
@@ -1691,10 +1745,18 @@ html {
             }
           }
 
+          a {
+            color: #FFFFFF;
+          }
+
           .footerWrapperLeftContentWrapperPost {
             display: flex;
             align-items: center;
             margin-right: 60px;
+
+            @media (min-width: 360px) and (max-width: 768px) {
+              margin-bottom: 12px;
+            }
 
             h4 {
               margin-right: 12px;

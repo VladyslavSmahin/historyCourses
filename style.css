@@ -100,6 +100,11 @@ html body .section1 header {
   padding-top: 18px;
   z-index: 1;
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html body .section1 header {
+    padding-top: 10px;
+  }
+}
 html body .section1 header .burgerOpenBtn {
   display: block;
   position: relative;
@@ -153,9 +158,14 @@ html body .section1 header .headerWrapper .logo img {
     max-width: calc(100px + 70 * (100vw - 360px) / 664);
   }
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html body .section1 header .headerWrapper .logo img {
+    display: none;
+  }
+}
 html body .section1 header .headerWrapper .logo .logoP1 {
   color: var(--myCream);
-  font-weight: 700;
+  font-weight: 600;
 }
 html body .section1 header .headerWrapper .logo .logoP2 {
   color: var(--myRed);
@@ -217,10 +227,11 @@ html body .section1 header .headerWrapper ul li:not(:last-child) {
 html body .section1 header .headerWrapper .headerBtn {
   color: var(--myCream);
   background: none;
-  border: 3px var(--myRed) solid;
   padding: 12px 20px;
   font-size: 16px;
   z-index: 1;
+  border: 4px var(--myRed) solid;
+  font-weight: 700;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section1 header .headerWrapper .headerBtn {
@@ -248,7 +259,7 @@ html body .section1 .section1Content {
 }
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section1 .section1Content {
-    padding-top: calc(39px + 174 * (100vw - 360px) / 408);
+    padding-top: calc(60px + 153 * (100vw - 360px) / 408);
     padding-bottom: calc(60px + 190 * (100vw - 360px) / 408);
   }
 }
@@ -257,6 +268,7 @@ html body .section1 .section1Content h1 {
   font-size: 74px;
   color: var(--myRed);
   font-weight: 600;
+  text-transform: uppercase;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section1 .section1Content h1 {
@@ -277,11 +289,18 @@ html body .section1 .section1Content h4 {
     font-size: calc(14px + 14 * (100vw - 360px) / 1080);
   }
 }
+@media (min-width: 360px) and (max-width: 768px) {
+  html body .section1 .section1Content h4 {
+    margin-bottom: 24px;
+  }
+}
 html body .section1 .section1Content .section1MoreLink {
+  font-weight: 600;
+  font-family: "Tektur", sans-serif;
   font-size: 24px;
   padding: 16px 62px;
   color: var(--myCream);
-  border: 3px var(--myRed) solid;
+  border: 3px var(--myCream) solid;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section1 .section1Content .section1MoreLink {
@@ -551,7 +570,7 @@ html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .l
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureText {
     font-size: calc(14px + 2 * (100vw - 360px) / 408);
-    margin-bottom: calc(12px + 38 * (100vw - 360px) / 408);
+    margin-bottom: calc(48px + 2 * (100vw - 360px) / 408);
   }
 }
 html body .section3 .section3Wrapper .section3Lecture .section3LectureContent .lectureTitleWrapper .lectureMore {
@@ -832,7 +851,6 @@ html body .section3 .section3Wrapper .section3Summary .headerBtn {
   background: none;
   border: 3px var(--myCream) solid;
   padding: 12px 20px;
-  font-size: 16px;
   z-index: 2;
   position: absolute;
   left: 50%;
@@ -840,10 +858,13 @@ html body .section3 .section3Wrapper .section3Summary .headerBtn {
   bottom: 0;
   max-width: 200px;
   width: 100%;
+  font-size: 20px;
+  font-family: "Tektur", sans-serif;
+  font-weight: 500;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section3 .section3Wrapper .section3Summary .headerBtn {
-    font-size: calc(13px + 7 * (100vw - 360px) / 1080);
+    font-size: calc(20px + 0 * (100vw - 360px) / 1080);
   }
 }
 @media (min-width: 360px) and (max-width: 1024px) {
@@ -935,8 +956,11 @@ html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 {
   background-image: url("images/Group3549.png");
   position: relative;
   width: 100%;
-  max-width: 393px;
-  height: 353px;
+  max-width: 320px;
+  height: 288px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper {
   position: absolute;
@@ -948,12 +972,12 @@ html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .sectio
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Num {
   font-size: 32px;
   position: absolute;
-  top: -46px;
+  top: -37px;
   right: -40px;
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Num {
-    right: calc(-18px + 18 * (100vw - 360px) / 664) !important;
+    right: calc(-10px + 10 * (100vw - 360px) / 664) !important;
   }
 }
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart1 .section4Cart1ContentWrapper .section4Cart1Title {
@@ -966,8 +990,11 @@ html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 {
   background-image: url("images/Group3531.png");
   position: relative;
   width: 100%;
-  max-width: 393px;
-  height: 357px;
+  max-width: 320px;
+  height: 288px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper {
   position: absolute;
@@ -979,12 +1006,12 @@ html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .sectio
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Num {
   font-size: 32px;
   position: absolute;
-  top: -46px;
+  top: -34px;
   right: -15px;
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Num {
-    right: calc(-18px + 51 * (100vw - 360px) / 664) !important;
+    right: calc(10px + 23 * (100vw - 360px) / 664) !important;
   }
 }
 html body .section4 .section4Wrapper .section4CartWrapper .section4Cart2 .section4Cart2ContentWrapper .section4Cart2Title {
@@ -1041,8 +1068,11 @@ html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart3 {
   background-image: url("images/Group3533.png");
   position: relative;
   width: 100%;
-  max-width: 393px;
-  height: 380px;
+  max-width: 320px;
+  height: 310px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart3 .section4Cart3ContentWrapper {
   position: absolute;
@@ -1103,8 +1133,11 @@ html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart5 {
   background-image: url("images/Group3535.png");
   position: relative;
   width: 100%;
-  max-width: 393px;
-  height: 407px;
+  max-width: 320px;
+  height: 330px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart5 .section4Cart5ContentWrapper {
   position: absolute;
@@ -1123,7 +1156,7 @@ html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart5 .secti
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   html body .section4 .section4Wrapper .section4CartWrapper2 .section4Cart5 .section4Cart5ContentWrapper .section4Cart5Num {
-    top: -76px;
+    top: -48px;
     right: 27px;
   }
 }
@@ -1241,6 +1274,7 @@ html body .section5 .section5Wrapper .section5LeftContentWrapper .section5LeftCo
   font-size: 22px;
   line-height: 32px;
   color: var(--myCream);
+  margin-bottom: 40px;
 }
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section5 .section5Wrapper .section5LeftContentWrapper .section5LeftContentWrapperTextDescription {
@@ -1290,7 +1324,7 @@ html body .section5 .section5Wrapper .section5RightContentWrapper .section5Right
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section5 .section5Wrapper .section5RightContentWrapper .section5RightContentPhotoWrapper .section5RightContentPhotoDescr1Wrapper {
     position: relative;
-    top: 0px;
+    top: -64px;
     left: 0px;
     max-width: calc(320px + 130 * (100vw - 360px) / 408) !important;
     line-height: 22px;
@@ -1325,8 +1359,9 @@ html body .section5 .section5Wrapper .section5RightContentWrapper .section5Right
 }
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section5 .section5Wrapper .section5RightContentWrapper .section5RightContentPhotoWrapper .section5RightContentPhotoDescr2Wrapper {
-    margin-bottom: 60px;
+    margin-bottom: 0;
     max-width: calc(320px + 130 * (100vw - 360px) / 408) !important;
+    top: -98px;
   }
 }
 html body .section5 .section5Wrapper .section5RightContentWrapper .section5RightContentPhotoWrapper .section5RightContentPhotoDescr2Wrapper .section5RightContentPhotoDescr2 {
@@ -1358,10 +1393,16 @@ html body .section5 .section5Wrapper .section5RightContentWrapper .section5Right
 html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapperTitle {
   font-size: 64px;
   color: var(--myCream);
+  text-transform: uppercase;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapperTitle {
     font-size: calc(32px + 32 * (100vw - 360px) / 1080);
+  }
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapperTitle {
+    margin-top: -10px;
   }
 }
 html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapperTitle span {
@@ -1412,10 +1453,13 @@ html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentW
 html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapper .price {
   position: absolute;
   right: 52px;
+  font-family: "tektur", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
 }
 @media (min-width: 360px) and (max-width: 768px) {
   html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .priceWrapper .price {
-    right: calc(56px + 5 * (100vw - 360px) / 408) !important;
+    right: calc(37px + 24 * (100vw - 360px) / 408) !important;
   }
 }
 html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .orderBtn {
@@ -1423,12 +1467,14 @@ html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentW
   background: none;
   border: 3px var(--myRed) solid;
   padding: 16px 55px;
-  font-size: 16px;
+  font-size: 20px;
   z-index: 1;
+  font-family: "Tektur", sans-serif;
+  font-weight: 500;
 }
 @media (min-width: 360px) and (max-width: 1440px) {
   html body .section5 .section5Wrapper .section5RightContentWrapper .priceContentWrapper .orderBtn {
-    font-size: calc(13px + 7 * (100vw - 360px) / 1080);
+    font-size: calc(20px + 0 * (100vw - 360px) / 1080);
   }
 }
 html body .section5::after {
@@ -1472,6 +1518,7 @@ html body .section6 .section6Wrapper .section6TitleWrapper h4 {
 }
 @media (min-width: 360px) and (max-width: 1024px) {
   html body .section6 .section6Wrapper .section6TitleWrapper h4 {
+    font-size: calc(32px + 32 * (100vw - 360px) / 664);
     margin-bottom: 40px;
   }
 }
@@ -1515,10 +1562,11 @@ html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainCo
   }
 }
 html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainContentWrapperLeft .section6MainContentWrapperLeftCart h4 {
+  font-weight: 600;
+  text-transform: uppercase;
   font-size: 28px;
   color: var(--myCream);
   padding: 0 16px;
-  font-weight: normal;
 }
 html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainContentWrapperLeft .section6MainContentWrapperLeftCartDescription1 {
   margin-bottom: 60px;
@@ -1555,10 +1603,11 @@ html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainCo
   }
 }
 html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainContentWrapperRight .section6MainContentWrapperRightCart h4 {
+  font-weight: 600;
+  text-transform: uppercase;
   font-size: 28px;
   color: var(--myCream);
   padding: 0 16px;
-  font-weight: normal;
 }
 html body .section6 .section6Wrapper .section6MainContentWrapper .section6MainContentWrapperRight .section6MainContentWrapperRightCartDescription1 {
   margin-bottom: 107px;
@@ -1578,6 +1627,11 @@ html body .section6 .section6Wrapper .section6ImgMap {
   top: 31px;
   right: 0;
   z-index: 0;
+}
+@media (min-width: 360px) and (max-width: 1440px) {
+  html body .section6 .section6Wrapper .section6ImgMap {
+    max-width: calc(400px + 513 * (100vw - 360px) / 1080);
+  }
 }
 html body footer {
   background-color: var(--myBlack);
@@ -1608,6 +1662,7 @@ html body footer .footerWrapper .footerWrapperLeftContentWrapper {
   html body footer .footerWrapper .footerWrapperLeftContentWrapper {
     flex-direction: column;
     align-items: start;
+    margin-bottom: 20px;
   }
 }
 html body footer .footerWrapper .footerWrapperLeftContentWrapper h4, html body footer .footerWrapper .footerWrapperLeftContentWrapper a {
@@ -1618,10 +1673,18 @@ html body footer .footerWrapper .footerWrapperLeftContentWrapper h4, html body f
     font-size: calc(14px + 10 * (100vw - 360px) / 408);
   }
 }
+html body footer .footerWrapper .footerWrapperLeftContentWrapper a {
+  color: #FFFFFF;
+}
 html body footer .footerWrapper .footerWrapperLeftContentWrapper .footerWrapperLeftContentWrapperPost {
   display: flex;
   align-items: center;
   margin-right: 60px;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+  html body footer .footerWrapper .footerWrapperLeftContentWrapper .footerWrapperLeftContentWrapperPost {
+    margin-bottom: 12px;
+  }
 }
 html body footer .footerWrapper .footerWrapperLeftContentWrapper .footerWrapperLeftContentWrapperPost h4 {
   margin-right: 12px;
