@@ -119,7 +119,7 @@ html {
           width: 26px;
           height: 26px;
 
-          @media (min-width: 1025px) and (max-width: 1440px) {
+          @media (min-width: 1025px) and (max-width: 1900px) {
             display: none;
           }
         }
@@ -134,14 +134,14 @@ html {
             z-index: 1;
             position: relative;
             width: 100%;
-            max-width: 284px;
+            max-width: 270px;
 
 
             @media (min-width: 360px) and (max-width: 1440px) {
               font-size: calc(13px + (20 - 13) * ((100vw - 360px) / (1440 - 360)));
             }
             @media (min-width: 1024px) and (max-width: 1440px) {
-              max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
+              max-width: calc(170px + (270 - 170) * ((100vw - 1024px) / (1440 - 1024)));
 
             }
             @media (min-width: 360px) and (max-width: 1024px) {
@@ -151,10 +151,10 @@ html {
 
             img {
               position: absolute;
-              max-width: 284px;
+              max-width: 270px;
 
               @media (min-width: 1024px) and (max-width: 1440px) {
-                max-width: calc(170px + (284 - 170) * ((100vw - 1024px) / (1440 - 1024)));
+                max-width: calc(170px + (270 - 170) * ((100vw - 1024px) / (1440 - 1024)));
               }
               @media (min-width: 360px) and (max-width: 1024px) {
                 max-width: calc(100px + (170 - 100) * ((100vw - 360px) / (1024 - 360)));
@@ -193,13 +193,13 @@ html {
               margin-left: 8px;
 
               img {
-                max-width: 40px;
+                max-width: 36px;
                 height: 1px;
                 margin: 0 4px;
                 position: relative;
                 top: 1px;
                 @media (min-width: 1024px) and (max-width: 1440px) {
-                  max-width: calc(5px + (38 - 5) * ((100vw - 1024px) / (1440 - 1024)));
+                  max-width: calc(5px + (36 - 5) * ((100vw - 1024px) / (1440 - 1024)));
                 }
               }
 
@@ -922,9 +922,9 @@ html {
             }
 
             .section4CartContentWrapper {
-              //max-width: 222px !important;
+
               @media (min-width: 360px) and (max-width: 1024px) {
-                max-width: calc(268px + (310 - 222) * ((100vw - 360px) / (1024 - 360))) !important;
+                max-width: calc(268px + (300 - 268) * ((100vw - 360px) / (1024 - 360))) !important;
                 width: 100%;
 
               }
@@ -956,11 +956,16 @@ html {
             background-image: url("images/Group3549.png");
             position: relative;
             width: 100%;
-            max-width: 320px;
-            height: 288px;
+            max-width: 393px;
+            height: 353px;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(320px + (393 - 320) * ((100vw - 360px) / (1440 - 360))) ;
+              height: calc(288px + (353 - 288) * ((100vw - 360px) / (1440 - 360)));
+
+            }
 
             .section4Cart1ContentWrapper {
               position: absolute;
@@ -976,7 +981,7 @@ html {
                 right: -40px;
 
                 @media (min-width: 360px) and (max-width: 1024px) {
-                  right: calc(-10px + (0 + 10) * ((100vw - 360px) / (1024 - 360))) !important;
+                  right: calc(-10px + (17 + 10) * ((100vw - 360px) / (1024 - 360))) !important;
 
                 }
               }
@@ -996,11 +1001,17 @@ html {
             background-image: url("images/Group3531.png");
             position: relative;
             width: 100%;
-            max-width: 320px;
-            height: 288px;
+            max-width: 393px;
+            height: 357px;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(320px + (393 - 320) * ((100vw - 360px) / (1440 - 360))) ;
+              height: calc(288px + (357 - 288) * ((100vw - 360px) / (1440 - 360)));
+
+            }
 
             .section4Cart2ContentWrapper {
               position: absolute;
@@ -1087,11 +1098,17 @@ html {
             background-image: url("images/Group3533.png");
             position: relative;
             width: 100%;
-            max-width: 320px;
-            height: 310px;
+            max-width: 393px;
+            height: 380px;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(320px + (393 - 320) * ((100vw - 360px) / (1440 - 360))) ;
+              height: calc(310px + (380 - 310) * ((100vw - 360px) / (1440 - 360)));
+
+            }
 
             .section4Cart3ContentWrapper {
               position: absolute;
@@ -1127,6 +1144,11 @@ html {
             max-width: 393px;
             height: 375px;
 
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(393px + (393 - 393) * ((100vw - 360px) / (1440 - 360))) ;
+              height: calc(375px + (380 - 375) * ((100vw - 360px) / (1440 - 360)));
+
+            }
             @media (min-width: 360px) and (max-width: 1024px) {
               top: 0px;
             }
@@ -1161,11 +1183,17 @@ html {
             background-image: url("images/Group3535.png");
             position: relative;
             width: 100%;
-            max-width: 320px;
-            height: 330px;
+            max-width: 393px;
+            height: 407px;
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @media (min-width: 360px) and (max-width: 1440px) {
+              max-width: calc(320px + (393 - 320) * ((100vw - 360px) / (1440 - 360))) ;
+              height: calc(330px + (407 - 330) * ((100vw - 360px) / (1440 - 360)));
+
+            }
 
             .section4Cart5ContentWrapper {
               position: absolute;
