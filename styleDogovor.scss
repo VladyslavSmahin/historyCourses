@@ -282,7 +282,7 @@ html {
             background-size: cover;
             position: relative;
             @media (min-width: 768px) and (max-width: 1440px) {
-              width: calc(600px + (767 - 600) * ((100vw - 768px) / (1440 - 768))) ;
+              width: calc(600px + (767 - 600) * ((100vw - 768px) / (1440 - 768)));
 
             }
             @media (min-width: 360px) and (max-width: 768px) {
@@ -290,7 +290,8 @@ html {
               width: 340px;
               height: 197px;
             }
-            h2{
+
+            h2 {
               font-family: "Tektur", sans-serif;
               font-optical-sizing: auto;
               text-transform: uppercase;
@@ -301,12 +302,14 @@ html {
               width: 685px;
               font-size: 32px;
               color: var(--myBlack);
-              span{
+
+              span {
                 color: var(--myRed);
               }
+
               @media (min-width: 768px) and (max-width: 1440px) {
-                font-size: calc(24px + (32 - 24) * ((100vw - 768px) / (1440 - 768))) ;
-                width: calc(510px + (685 - 510) * ((100vw - 768px) / (1440 - 768))) ;
+                font-size: calc(24px + (32 - 24) * ((100vw - 768px) / (1440 - 768)));
+                width: calc(510px + (685 - 510) * ((100vw - 768px) / (1440 - 768)));
 
               }
               @media (min-width: 360px) and (max-width: 768px) {
@@ -321,10 +324,13 @@ html {
             display: flex;
             justify-content: space-between;
             margin-bottom: 80px;
-            p{
+            align-items: center;
 
+            p {
+              padding: 0 14px;
             }
-            img{
+
+            img {
               max-width: 24px;
               max-height: 72px;
             }

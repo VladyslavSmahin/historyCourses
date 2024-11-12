@@ -320,8 +320,10 @@ html {
             display: flex;
             justify-content: space-between;
             margin-bottom: 80px;
-            p{
+            align-items: center;
 
+            p{
+              padding: 0 14px;
             }
             img{
               max-width: 24px;
